@@ -54,7 +54,7 @@ var EMBLEM = function(sz,id){return '<svg viewBox="0 0 400 400" width="'+sz+'" h
  '<defs><linearGradient id="g'+id+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7b52b9"/><stop offset="1" stop-color="#2e1452"/></linearGradient>'+
  '<path id="c'+id+'" d="M200,200 m-150,0 a150,150 0 1,1 300,0 a150,150 0 1,1 -300,0"/></defs>'+
  '<circle cx="200" cy="200" r="196" fill="#f2c14e"/><circle cx="200" cy="200" r="184" fill="url(#g'+id+')"/>'+
- (sz>60?'<g class="spin"><text font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="25" letter-spacing="5" fill="#f2c14e"><textPath href="#c'+id+'">HOLDEN · FUTURE WILDCAT · AVIATION MAINTENANCE · SALINA, KS · </textPath></text></g>':'')+
+ (sz>60?'<g class="spin"><text font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="24" fill="#f2c14e" textLength="930" lengthAdjust="spacing"><textPath href="#c'+id+'" textLength="930" lengthAdjust="spacing">HOLDEN · FUTURE WILDCAT · AVIATION MAINTENANCE · </textPath></text></g>':'')+
  '<circle cx="200" cy="200" r="122" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="2" stroke-dasharray="4 8"/>'+
  '<path d="M96 262 C150 250 230 222 300 150" stroke="rgba(255,255,255,.55)" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="2 12"/>'+
  '<g transform="translate(300 150) rotate(-38)" fill="#fff"><path d="M-30 0 L22 -5 Q34 0 22 5 Z"/><path d="M-4 -3 L-18 -26 L-10 -26 L12 -3 Z"/><path d="M-4 3 L-18 26 L-10 26 L12 3 Z"/><path d="M-26 -2 L-34 -12 L-29 -12 L-20 -2 Z"/><path d="M-26 2 L-34 12 L-29 12 L-20 2 Z"/></g>'+
@@ -96,8 +96,13 @@ var themeBtn=document.getElementById('themeBtn');
 function drawThemeBtn(){themeBtn.textContent=THEME_LABEL[theme];themeBtn.setAttribute('aria-label','Color theme: '+theme+'. Click to change.');}
 themeBtn.onclick=function(){theme=theme==="auto"?"light":theme==="light"?"dark":"auto";lsSet('holden-ksu-theme',theme);applyTheme();drawThemeBtn();};
 drawThemeBtn();
+function infoStamp(){
+ var at=(typeof INFO_UPDATED_AT!=="undefined")?new Date(INFO_UPDATED_AT):null;
+ if(!at||isNaN(at)) return INFO_UPDATED;
+ try{ return at.toLocaleString("en-US",{timeZone:"America/Chicago",month:"short",day:"numeric",year:"numeric",hour:"numeric",minute:"2-digit"}).replace(/, (\d{1,2}:)/," · $1")+" CT"; }catch(e){ return INFO_UPDATED; }
+}
 function drawUpdated(){
- document.getElementById('updatedBar').innerHTML='<span>Last updated: <b>'+INFO_UPDATED+'</b> (schedules, costs &amp; news · updated automatically)</span>'+(STATE.edited?'<span>Lists last edited: <b>'+fmtStamp(STATE.edited)+'</b></span>':'');
+ document.getElementById('updatedBar').innerHTML='<span>Last updated: <b>'+infoStamp()+'</b> (schedules, costs &amp; news · updated automatically)</span>'+(STATE.edited?'<span>Lists last edited: <b>'+fmtStamp(STATE.edited)+'</b></span>':'');
 }
 drawUpdated();
 
@@ -119,7 +124,7 @@ function renderHome(){
  '<div class="wrap">'+
   '<div class="countdown"><div class="cdCard" role="timer" aria-label="Countdown to the first day of classes">'+
    '<div><div class="cdLabel">Countdown to college</div><div class="cdTitle">First day of classes · Mon, Aug 16, 2027</div><div class="cdSub">K-State Fall 2027 semester begins</div></div>'+
-   '<div class="cdNums"><div class="cdBox days"><b id="cdD">—</b><span>Days</span></div><div class="cdBox"><b id="cdH">—</b><span>Hours</span></div></div>'+
+   '<div class="cdNums"><div class="cdBox days"><b id="cdD">—</b><span>Days</span></div></div>'+
   '</div></div>'+
   '<div class="quick">'+
    '<a class="qCard" href="#news"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h13v16H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v10a2 2 0 0 1-2 2"/><path d="M8 8h5M8 12h5M8 16h3"/></svg></div><h3>News</h3><p>Athletics, Salina and Manhattan headlines.</p><div class="stat">'+NEWS.length+' recent stories</div></a>'+
@@ -235,7 +240,7 @@ function drawNews(g){
 function tick(){
  var d=document.getElementById('cdD'); if(!d) return;
  var ms=START-new Date(); if(ms<0) ms=0;
- d.textContent=Math.floor(ms/864e5); document.getElementById('cdH').textContent=Math.floor(ms/36e5)%24;
+ d.textContent=Math.floor(ms/864e5);
  
 }
 setInterval(tick,1000);

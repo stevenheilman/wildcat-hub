@@ -3,8 +3,9 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-10.2";   /* bump on every change (also in version.json) */
+var SITE_VERSION = "2026-11-10.3";   /* bump on every change (also in version.json) */
 var INFO_UPDATED = "Nov 10, 2026";
+var INFO_UPDATED_AT = "2026-11-10T09:00:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
