@@ -3,7 +3,7 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-10.1";   /* bump on every change (also in version.json) */
+var SITE_VERSION = "2026-11-10.2";   /* bump on every change (also in version.json) */
 var INFO_UPDATED = "Nov 10, 2026";
 
 var SRC = {

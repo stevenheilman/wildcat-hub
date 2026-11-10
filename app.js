@@ -119,7 +119,7 @@ function renderHome(){
  '<div class="wrap">'+
   '<div class="countdown"><div class="cdCard" role="timer" aria-label="Countdown to the first day of classes">'+
    '<div><div class="cdLabel">Countdown to college</div><div class="cdTitle">First day of classes · Mon, Aug 16, 2027</div><div class="cdSub">K-State Fall 2027 semester begins</div></div>'+
-   '<div class="cdNums"><div class="cdBox days"><b id="cdD">—</b><span>Days</span></div><div class="cdBox"><b id="cdH">—</b><span>Hours</span></div><div class="cdBox"><b id="cdM">—</b><span>Min</span></div><div class="cdBox"><b id="cdS">—</b><span>Sec</span></div></div>'+
+   '<div class="cdNums"><div class="cdBox days"><b id="cdD">—</b><span>Days</span></div><div class="cdBox"><b id="cdH">—</b><span>Hours</span></div></div>'+
   '</div></div>'+
   '<div class="quick">'+
    '<a class="qCard" href="#news"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h13v16H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v10a2 2 0 0 1-2 2"/><path d="M8 8h5M8 12h5M8 16h3"/></svg></div><h3>News</h3><p>Athletics, Salina and Manhattan headlines.</p><div class="stat">'+NEWS.length+' recent stories</div></a>'+
@@ -236,7 +236,7 @@ function tick(){
  var d=document.getElementById('cdD'); if(!d) return;
  var ms=START-new Date(); if(ms<0) ms=0;
  d.textContent=Math.floor(ms/864e5); document.getElementById('cdH').textContent=Math.floor(ms/36e5)%24;
- document.getElementById('cdM').textContent=("0"+Math.floor(ms/6e4)%60).slice(-2); document.getElementById('cdS').textContent=("0"+Math.floor(ms/1e3)%60).slice(-2);
+ 
 }
 setInterval(tick,1000);
 /* Roll over to the new day on its own: re-draw the current page at midnight so 'upcoming' events and countdown stay current */
@@ -275,7 +275,7 @@ function renderCalendar(){
  el.innerHTML=
  '<div class="pageHero"><div class="wrap"><h1 class="disp">KSU Calendar</h1><p>Tap any event for the time, place, how to watch and a link to the official source. Family to-dos with due dates show up here too.</p></div></div>'+
  '<div class="wrap pageBody">'+
-  '<div class="calTools"><div class="tabs" id="calTabs" role="group" aria-label="Filter events">'+chips+'</div><label class="toggle"><input type="checkbox" id="hidePast" '+(hidePast?'checked':'')+'> Upcoming only</label></div>'+
+  '<div class="calTools"><div class="tabs" id="calTabs" role="group" aria-label="Filter events">'+chips+'</div><div class="calRight"><button type="button" class="tab" id="expAll">⊞ Expand all</button><button type="button" class="tab" id="colAll">⊟ Collapse all</button><label class="toggle"><input type="checkbox" id="hidePast" '+(hidePast?'checked':'')+'> Upcoming only</label></div></div>'+
   html+
   '<div class="tba"><h3>📌 Dates still to be announced</h3><ul>'+
    '<li><b>K-State Salina New Student Onboarding</b> (summer 2027) — Salina runs its own onboarding, separate from Manhattan\'s orientation. Questions: salinaadmissions@k-state.edu · 785-826-2640.</li>'+
@@ -289,6 +289,8 @@ function renderCalendar(){
  el.querySelectorAll('#calTabs .tab').forEach(function(b){b.onclick=function(){calFilter=b.dataset.c;renderCalendar();};});
  el.querySelectorAll('details.ev').forEach(function(dt){dt.addEventListener('toggle',function(){if(dt.open)openEv[dt.dataset.k]=1;else delete openEv[dt.dataset.k];});});
  document.getElementById('hidePast').onchange=function(){hidePast=this.checked;renderCalendar();};
+ document.getElementById('expAll').onclick=function(){el.querySelectorAll('details.ev').forEach(function(d){d.open=true;openEv[d.dataset.k]=1;});};
+ document.getElementById('colAll').onclick=function(){el.querySelectorAll('details.ev').forEach(function(d){d.open=false;});openEv={};};
 }
 
 /* ---------- FINANCES ---------- */
