@@ -3,9 +3,9 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-10.3";   /* bump on every change (also in version.json) */
-var INFO_UPDATED = "Nov 10, 2026";
-var INFO_UPDATED_AT = "2026-11-10T09:00:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
+var SITE_VERSION = "2026-11-11.1";   /* bump on every change (also in version.json) */
+var INFO_UPDATED = "Nov 11, 2026";
+var INFO_UPDATED_AT = "2026-11-11T05:35:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
@@ -41,36 +41,44 @@ var SRC = {
  n9:{t:"K-State News — Fall 2026 enrollment",u:"https://www.k-state.edu/news/articles/2026/09/fall-2026-enrollment-census-steady-student-headcount.html",w:"21,283 students; graduate outcomes",g:"News & athletics"},
  fb26:{t:"K-State Athletics — 2026 football schedule",u:"https://www.kstatesports.com/news/2026/1/21/k-state-big-12-announce-2026-football-schedule",w:"Remaining 2026 games",g:"News & athletics"},
  fb27:{t:"FBSchedules — NC State/Kansas State series & 2027 dates",u:"https://fbschedules.com/nc-state-schedules-home-and-home-football-series-with-kansas-state-for-2027-2032/amp",w:"2027 home dates vs South Dakota (Sep 4) and Georgia Southern (Sep 11)",g:"News & athletics"},
+ sal1:{t:"K-State News — Pilot students gain campus self-examining authority",u:"https://www.k-state.edu/news/articles/2026/11/pilot-students-save-time-money-with-campus-self-examining-authority-for-instrument-ratings.html",w:"Nov 9, 2026: FAA authority for instrument ratings at K-State Salina",g:"News & athletics"},
+ man1:{t:"K-State News — Andy Thompson named interim dean of students",u:"https://www.k-state.edu/news/articles/2026/11/andy-thompson-named-interim-leader-of-dassa.html",w:"Nov 9, 2026 leadership announcement",g:"News & athletics"},
+ bbtv:{t:"K-State Athletics — Times & TV for 2026-27 men's basketball",u:"https://www.kstatesports.com/news/2026/10/13/mens-basketball-k-state-announces-times-tv-for-2026-27-mens-basketball",w:"Tip times and TV for the full 2026-27 schedule",g:"News & athletics"},
+ n10:{t:"WIBW — K-State men's basketball outduels Creighton",u:"https://www.wibw.com/2026/11/11/k-state-mens-basketball-outduels-creighton/",w:"Nov 10, 2026 game recap",g:"News & athletics"},
  fb27b:{t:"Sports Brackets — K-State 2027 opponents",u:"https://sportsbrackets.net/2026/09/03/kansas-state-wildcats-future-opponents-schedule-by-year/",w:"2027 Big 12 home and away opponents",g:"News & athletics"}
 };
 
 var NEWS = [
+ {g:"ath",date:"Nov 10, 2026",t:"Rechsteiner's 26 lifts K-State past Creighton",s:"Brandon Rechsteiner scored 26 for the second straight game as the Wildcats beat Creighton 89-82 in Manhattan, shooting nearly 58% to move to 2-1. Montana visits Bramlage on Monday, Nov. 16.",src:"n10",by:"WIBW"},
  {g:"ath",date:"Nov 9, 2026",t:"Cats head to Fort Worth for a 1 p.m. kickoff",s:"K-State (4-5) visits TCU on Saturday, Nov. 14 at Amon G. Carter Stadium. Kickoff is 1 p.m. Central on ESPNU, and K-State leads the all-time series 11-8.",src:"n1",by:"K-State Athletics"},
  {g:"ath",date:"Nov 7, 2026",t:"Oklahoma State rolls past K-State in Manhattan",s:"The Wildcats fell 66-28 to Oklahoma State at Bill Snyder Family Stadium, their third straight loss.",src:"live",by:"K-State Athletics"},
  {g:"ath",date:"Oct 17, 2026",t:"Sunflower Showdown streak hits 18 straight",s:"K-State beat Kansas 35-24 in front of a sellout crowd, piling up 359 rushing yards to extend the longest active rivalry win streak in the country.",src:"n2",by:"K-State Athletics"},
- {g:"ath",date:"Nov 2026",t:"Casey Alexander era tips off in Bramlage",s:"Men's basketball opened its first season under new coach Casey Alexander; next up is the Players Era event in Las Vegas, starting against Gonzaga on Nov. 24 at 11:30 p.m. Central.",src:"pe16",by:"K-State Athletics"},
- {g:"ath",date:"Sep 17, 2026",t:"Big 12 basketball dates set — circle Jan. 23",s:"Kansas comes to Manhattan on Saturday, Jan. 23, K-State plays in Lawrence on Feb. 27, and senior night is March 6 against Cincinnati.",src:"n4",by:"KCTV5"},
+ {g:"sal",date:"Nov 9, 2026",t:"Salina can now test its own instrument-rating pilots",s:"The FAA granted K-State Salina self-examining authority for instrument ratings, so students can finish with an end-of-course check by campus flight instructors instead of waiting on an outside examiner — saving time and up to about $1,000 each.",src:"sal1",by:"K-State News"},
  {g:"sal",date:"Oct 19, 2026",t:"New Silicon Prairie Trailblazers scholarships",s:"K-State Salina will award $12,000 over two years to 40 incoming fall 2027 students in four emerging-tech programs (immersive systems, machine learning, robotics and uncrewed aircraft). Aviation maintenance isn't one of them.",src:"n5",by:"JC Post"},
  {g:"sal",date:"2026–2027",t:"Two new buildings transforming the Salina campus",s:"The K-AIRES AI research and entertainment studio is coming online, and the Aerospace Education Hub is slated to open in 2027 — right around Holden's freshman year.",src:"n6",by:"K-State Salina"},
- {g:"sal",date:"May 21, 2026",t:"Salina honors its standout students and staff",s:"K-State Salina recognized two students and five faculty and staff members with its annual excellence awards for the 2025-26 year.",src:"n7",by:"K-State News"},
+ {g:"man",date:"Nov 9, 2026",t:"New interim leader for student affairs",s:"Longtime K-State administrator Andy Thompson was named interim vice president for academic success and student affairs and dean of students, effective immediately.",src:"man1",by:"K-State News"},
  {g:"man",date:"Oct 14, 2026",t:"President Linton heading to Virginia Tech",s:"K-State President Richard Linton announced he has been named Virginia Tech's next president and shared reflections on his time leading K-State.",src:"n8",by:"K-State News"},
- {g:"man",date:"Sep 2026",t:"Enrollment reaches its highest level since 2020",s:"K-State welcomed 21,283 students across Manhattan, Salina and Olathe this fall, and reports that 97% of 2025 graduates were employed or continuing their education.",src:"n9",by:"K-State News"},
- {g:"man",date:"Sep 23, 2026",t:"2027–28 academic calendar is out",s:"The registrar posted Holden's freshman-year calendar: fall classes start Monday, Aug. 16, 2027, with a full week off for Thanksgiving.",src:"cal",by:"K-State Registrar"}
+ {g:"man",date:"Sep 2026",t:"Enrollment reaches its highest level since 2020",s:"K-State welcomed 21,283 students across Manhattan, Salina and Olathe this fall, and reports that 97% of 2025 graduates were employed or continuing their education.",src:"n9",by:"K-State News"}
 ];
 
 /* d=date, c=category, t=title, s=subtitle, time, place, tv, info (extra details), src=SRC key, star */
 var EVENTS = [
  {d:"2026-11-07",c:"fb",t:"Football vs Oklahoma State",s:"Final: Oklahoma State 66, K-State 28",time:"12:00 p.m. CT",place:"Bill Snyder Family Stadium, Manhattan, KS",tv:"TNT / truTV",src:"live"},
+ {d:"2026-11-10",c:"bb",t:"Basketball vs Creighton",s:"Final: K-State 89, Creighton 82",time:"8:00 p.m. CT",place:"Bramlage Coliseum, Manhattan, KS",tv:"FS1",src:"n10"},
  {d:"2026-11-14",c:"fb",t:"Football at TCU",s:"1:00 p.m. CT · ESPNU · Fort Worth, TX",time:"1:00 p.m. Central (kickoff)",place:"Amon G. Carter Stadium, Fort Worth, TX",tv:"ESPNU (stream on ESPN+) · Radio: K-State Sports Network",info:"K-State leads the all-time series 11-8.",src:"n1"},
- {d:"2026-11-21",c:"fb",t:"Football vs Arizona — Senior Day",s:"Manhattan · kickoff time TBA",time:"TBA — Big 12 kickoff times are usually announced 6–12 days ahead",place:"Bill Snyder Family Stadium, Manhattan, KS",info:"Last home game of 2026; seniors are honored before kickoff.",src:"fbsch"},
- {d:"2026-11-24",c:"bb",t:"Basketball vs Gonzaga",s:"11:30 p.m. CT · Players Era 16 · Las Vegas",time:"11:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPN family of networks",info:"Opening round of the Players Era 16 (Nov 24–28). K-State then plays Alabama or Baylor on Nov 26.",src:"pe16"},
+ {d:"2026-11-16",c:"bb",t:"Basketball vs Montana",s:"7:00 p.m. CT · ESPN+ · Bramlage Coliseum",time:"7:00 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"ESPN+",src:"bbtv"},
+ {d:"2026-11-21",c:"fb",t:"Football vs Arizona — Senior Day",s:"Manhattan · kickoff time TBA",time:"TBA — Big 12 expects to set the time and TV on Sun, Nov 15",place:"Bill Snyder Family Stadium, Manhattan, KS",info:"Last home game of 2026; seniors are honored before kickoff.",src:"fbsch"},
+ {d:"2026-11-24",c:"bb",t:"Basketball vs Gonzaga",s:"11:30 p.m. CT · Players Era 16 · Las Vegas",time:"11:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPN",info:"Opening round of the Players Era 16 (Nov 24–28). K-State then plays Alabama or Baylor on Nov 26.",src:"pe16"},
  {d:"2026-11-28",c:"fb",t:"Football at Iowa State",s:"Ames, IA · regular-season finale · time TBA",time:"TBA",place:"Jack Trice Stadium, Ames, IA",src:"fbsch"},
  {d:"2026-12-01",c:"dl",t:"Scholarship priority date",s:"Freshman priority date for K-State scholarship consideration",info:"Applying and being admitted by Dec 1 gives the best chance at scholarships.",src:"prio"},
+ {d:"2026-12-04",c:"bb",t:"Basketball at Seton Hall",s:"6:00 p.m. CT · truTV",time:"6:00 p.m. Central",tv:"truTV",src:"bbtv"},
+ {d:"2026-12-11",c:"bb",t:"Basketball vs Wichita State",s:"7:30 p.m. CT · TNT/truTV · Kansas City, MO",time:"7:30 p.m. Central",place:"Kansas City, MO (neutral site)",tv:"TNT / truTV",info:"In-state matchup played in Kansas City.",src:"bbtv"},
  {d:"2026-12-15",c:"dl",t:"Competitive scholarship applications due",s:"Supplemental applications for incoming domestic freshmen",src:"compdl"},
- {d:"2027-01-23",c:"bb",t:"Basketball vs Kansas",s:"Bramlage Coliseum, Manhattan · Sunflower Showdown",time:"TBA",place:"Bramlage Coliseum, Manhattan, KS",src:"n4"},
+ {d:"2027-01-05",c:"bb",t:"Basketball vs Houston — Big 12 home opener",s:"7:30 p.m. CT · FS1 · Bramlage Coliseum",time:"7:30 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"FS1",src:"bbtv"},
+ {d:"2027-01-23",c:"bb",t:"Basketball vs Kansas",s:"Bramlage Coliseum, Manhattan · Sunflower Showdown · FOX",time:"11:00 a.m. or 7:00 p.m. Central (to be finalized)",place:"Bramlage Coliseum, Manhattan, KS",tv:"FOX",src:"bbtv"},
  {d:"2027-02-01",c:"dl",t:"K-State Scholarship Network (KSN) deadline",s:"Incoming freshmen apply by Feb 1 for college & departmental scholarships",src:"ksn"},
- {d:"2027-02-27",c:"bb",t:"Basketball at Kansas",s:"Allen Fieldhouse, Lawrence",time:"TBA",place:"Allen Fieldhouse, Lawrence, KS",src:"n4"},
- {d:"2027-03-06",c:"bb",t:"Basketball vs Cincinnati — Senior Night",s:"Bramlage Coliseum, Manhattan",time:"TBA",place:"Bramlage Coliseum, Manhattan, KS",src:"n4"},
+ {d:"2027-02-27",c:"bb",t:"Basketball at Kansas",s:"Allen Fieldhouse, Lawrence · 1:00 p.m. CT · ESPN/ESPN2",time:"1:00 p.m. Central",place:"Allen Fieldhouse, Lawrence, KS",tv:"ESPN or ESPN2",src:"bbtv"},
+ {d:"2027-03-06",c:"bb",t:"Basketball vs Cincinnati — Senior Night",s:"Bramlage Coliseum, Manhattan · 4:00 p.m. CT · ESPN+",time:"4:00 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"ESPN+",src:"bbtv"},
  {d:"2027-03-22",c:"ac",t:"Fall 2027 early enrollment opens",s:"For continuing students; new freshmen enroll through Salina New Student Onboarding",src:"cal"},
  {d:"2027-04-01",c:"dl",t:"Scholarship upgrade deadline",s:"Last day to send 7th-semester transcript and ACT/SAT scores for a possible award upgrade",src:"kres"},
  {d:"2027-04-16",c:"ac",t:"Fall 2027 open enrollment begins",s:"",src:"cal"},
