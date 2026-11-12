@@ -79,12 +79,12 @@ root.innerHTML=
  '<header class="nav"><div class="wrap">'+
   '<a class="brand" href="#home">'+EMBLEM(34,"n")+'<span><small>Our K-State Hub</small>K-State Salina</span></a>'+
   '<button class="navBtn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>'+
-  '<nav class="menu" id="menu" aria-label="Main"><a href="#home" data-v="home">Home</a><a href="#news" data-v="news">News</a><a href="#calendar" data-v="calendar">Calendar</a><a href="#finances" data-v="finances">Finances</a><a href="#todos" data-v="todos">To Do\'s</a><a href="#needs" data-v="needs">Things I Need</a><a href="#sources" data-v="sources">Sources</a></nav>'+
+  '<nav class="menu" id="menu" aria-label="Main"><a href="#home" data-v="home">Home</a><a href="#news" data-v="news">News</a><a href="#football" data-v="football">Football</a><a href="#calendar" data-v="calendar">Calendar</a><a href="#finances" data-v="finances">Finances</a><a href="#todos" data-v="todos">To Do\'s</a><a href="#needs" data-v="needs">Things I Need</a><a href="#sources" data-v="sources">Sources</a></nav>'+
   '<button class="navBtn" id="themeBtn" aria-label="Color theme"></button>'+
  '</div></header>'+
  '<div class="updated" role="status"><div class="wrap" id="updatedBar"></div></div>'+
  '<main id="main" tabindex="-1">'+
- '<section class="page" id="v-home"></section><section class="page" id="v-news"></section><section class="page" id="v-calendar"></section><section class="page" id="v-finances"></section>'+
+ '<section class="page" id="v-home"></section><section class="page" id="v-news"></section><section class="page" id="v-football"></section><section class="page" id="v-calendar"></section><section class="page" id="v-finances"></section>'+
  '<section class="page" id="v-todos"></section><section class="page" id="v-needs"></section><section class="page" id="v-sources"></section>'+
  '</main>'+
  '<footer><div class="wrap">A private family planning page · Not affiliated with or endorsed by Kansas State University · Always confirm details with <a href="https://www.salina.k-state.edu/" target="_blank" rel="noopener">salina.k-state.edu</a> · <a href="#sources">Sources</a></div></footer>';
@@ -113,7 +113,7 @@ function renderHome(){
  var needLeft=STATE.needs.filter(function(n){return !n.got;}).length;
  var next=nextEvent();
  el.innerHTML=
- '<div class="hero"><div class="stripes"></div><div class="wrap">'+
+ '<div class="hero"><div class="stripes"></div>'+goCatsHTML()+'<div class="wrap">'+
   '<div><span class="eyebrow"><i></i>Accepted · Fall 2027</span>'+
   '<h1 class="big disp">Holden is a <span class="g">Wildcat</span><br><span class="o">K-State</span> Salina</h1>'+
   '<div class="degree"><div><div class="k">Bachelor of Science</div><div class="v">Aviation Maintenance Management ✈️🔧</div></div></div>'+
@@ -128,6 +128,7 @@ function renderHome(){
   '</div></div>'+
   '<div class="quick">'+
    '<a class="qCard" href="#news"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h13v16H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v10a2 2 0 0 1-2 2"/><path d="M8 8h5M8 12h5M8 16h3"/></svg></div><h3>News</h3><p>Athletics, Salina and Manhattan headlines.</p><div class="stat">'+NEWS.length+' recent stories</div></a>'+
+   '<a class="qCard" href="#football"><div class="ic" aria-hidden="true">🏈</div><h3>Football</h3><p>Schedule, record and the road to a bowl.</p><div class="stat">'+fbSummary()+'</div></a>'+
    '<a class="qCard" href="#calendar"><div class="ic">'+ICONS.cal+'</div><h3>Calendar</h3><p>Games, semester dates, breaks and deadlines.</p><div class="stat">'+(next?('Next: '+esc(next.t)+' · '+MON[parseD(next.d).getMonth()]+' '+parseD(next.d).getDate()):'')+'</div></a>'+
    '<a class="qCard" href="#finances"><div class="ic">'+ICONS.cash+'</div><h3>Finances</h3><p>Costs, Holden\'s award and more scholarships.</p><div class="stat">🎉 Wildcat Nonresident Award</div></a>'+
    '<a class="qCard" href="#todos"><div class="ic">'+ICONS.list+'</div><h3>To Do\'s</h3><p>Shared family checklist.</p><div class="stat">'+(isLocked()?'🔒 Family code needed':openTodos+' open item'+(openTodos===1?'':'s'))+'</div></a>'+
@@ -217,6 +218,94 @@ function destCards(){
  return it(C_SAL,"🎓 K-State Salina campus","2310 Centennial Rd, Salina, KS · Holden's new home",miles(PLACES.cp,PLACES.sal),a(gdir(CP,SAL),"Directions from home →"))+
   it(C_MAN,"🏈 Bill Snyder Family Stadium","Manhattan, KS · Wildcat football game days",miles(PLACES.cp,PLACES.man),a(gdir(CP,MAN),"From home →")+a(gdir(SAL,MAN),"From Salina campus ("+miles(PLACES.sal,PLACES.man)+" mi) →"))+
   it(C_CC,"🏡 Grandma &amp; Grandpa\'s","Clay Center, KS",miles(PLACES.cp,PLACES.cc),a(gdir(CP,CC),"From home →")+a(gdir(SAL,CC),"From Salina campus ("+miles(PLACES.sal,PLACES.cc)+" mi) →"));
+}
+
+
+/* ---------- GO CATS! MEGAPHONE (original artwork) ---------- */
+function megaphoneSVG(){
+ return '<svg class="mega" viewBox="0 0 220 160" aria-hidden="true" focusable="false">'+
+  '<g class="megaBody">'+
+   '<path d="M40 62 L168 18 Q186 80 168 142 L40 98 Z" fill="#512888" stroke="#2e1452" stroke-width="4" stroke-linejoin="round"/>'+
+   '<path d="M70 52 L150 25 Q163 80 150 135 L70 108 Z" fill="#b9a2e8" opacity=".55"/>'+
+   '<ellipse cx="168" cy="80" rx="16" ry="62" fill="#3a1a6b" stroke="#2e1452" stroke-width="4"/>'+
+   '<ellipse cx="168" cy="80" rx="9" ry="50" fill="#1a0b30"/>'+
+   '<rect x="22" y="60" width="24" height="40" rx="8" fill="#f2c14e" stroke="#2e1452" stroke-width="4"/>'+
+   '<path d="M70 104 Q66 134 88 138 L96 138 Q100 124 96 112" fill="#f2c14e" stroke="#2e1452" stroke-width="4" stroke-linejoin="round"/>'+
+   '<text x="112" y="88" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="22" fill="#fff" transform="rotate(-2 112 88)">CATS</text>'+
+  '</g>'+
+  '<g class="waves" fill="none" stroke="#f2c14e" stroke-width="6" stroke-linecap="round">'+
+   '<path d="M196 46 Q210 80 196 114"/><path d="M206 30 Q226 80 206 130" opacity=".7"/>'+
+  '</g>'+
+ '</svg>';
+}
+function goCatsHTML(){
+ return '<div class="goCats"><button type="button" class="goCatsBtn" id="goCatsBtn" aria-label="Go Cats! cheer">'+megaphoneSVG()+
+  '<span class="goTxt disp"><span>GO</span> <span>CATS!</span></span></button></div>';
+}
+document.addEventListener('click',function(e){
+ var b=e.target.closest&&e.target.closest('#goCatsBtn'); if(!b) return;
+ b.classList.remove('cheer'); void b.offsetWidth; b.classList.add('cheer');
+});
+
+/* ---------- FOOTBALL ---------- */
+function fbRecord(conf){var w=0,l=0;FOOTBALL.games.forEach(function(g){if(conf&&!g.conf)return;if(g.res==="W")w++;else if(g.res==="L")l++;});return {w:w,l:l,txt:w+"-"+l};}
+function fbNext(){var t=today0();for(var i=0;i<FOOTBALL.games.length;i++){var g=FOOTBALL.games[i];if(!g.res&&parseD(g.d)>=t)return g;}return null;}
+function fbSummary(){var r=fbRecord(),n=fbNext();return r.txt+(n?' · Next: '+(n.ha==="A"?"at ":"vs ")+esc(n.opp)+' '+MON[parseD(n.d).getMonth()]+' '+parseD(n.d).getDate():'');}
+function vsAt(g){return g.ha==="A"?"at":(g.ha==="N"?"vs":"vs");}
+function renderFootball(){
+ var el=document.getElementById('v-football'), F=FOOTBALL, r=fbRecord(), rc=fbRecord(true), n=fbNext(), t=today0();
+ var left=F.games.filter(function(g){return !g.res;}), need=Math.max(0,6-r.w);
+ /* road to a bowl */
+ var status, cls;
+ if(r.w>=6){status='✅ Bowl eligible!'+(F.bowl?' '+esc(F.bowl):' Bowl matchups are announced in early December.');cls='ok';}
+ else if(r.w+left.length<6){status='The season ends without a bowl game this year.';cls='out';}
+ else {status='Needs <b>'+need+'</b> more win'+(need===1?'':'s')+' in the last <b>'+left.length+'</b> game'+(left.length===1?'':'s')+' to reach 6 and become bowl eligible.';cls='live';}
+ var dots='';for(var i=1;i<=6;i++){dots+='<span class="wdot'+(i<=r.w?' on':'')+'">'+i+'</span>';}
+ var scen='';
+ if(r.w<6 && r.w+left.length>=6){
+  for(var k=left.length;k>=0;k--){var w=r.w+k,l=r.l+(left.length-k);scen+='<li class="'+(w>=6?'yes':'no')+'"><b>Win '+k+' of '+left.length+'</b> → '+w+'-'+l+(w>=6?' · bowl eligible 🎉':' · no bowl')+'</li>';}
+ }
+ var steps=left.map(function(g){var d=parseD(g.d);return '<li><span class="stepDate">'+MON[d.getMonth()]+' '+d.getDate()+'</span> '+vsAt(g)+' <b>'+esc(g.opp)+'</b>'+(g.time&&g.time!=="TBA"?' · '+esc(g.time):'')+'</li>';}).join('');
+ /* next game */
+ var nextHTML='<div class="fbCard"><h2 class="fbH">Next game</h2><p class="muted">No games left on the 2026 schedule.</p></div>';
+ if(n){var nd=parseD(n.d),days=Math.round((nd-t)/864e5);
+  nextHTML='<div class="fbCard next"><h2 class="fbH">Next game</h2>'+
+   '<div class="matchup"><span class="vs">'+(n.ha==="A"?"K-State at":"K-State vs")+'</span><span class="opp disp">'+esc(n.opp)+'</span></div>'+
+   '<div class="kv"><b>When</b><span>'+["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][nd.getDay()]+', '+MONL[nd.getMonth()]+' '+nd.getDate()+(n.time?' · '+esc(n.time):'')+'</span></div>'+
+   (n.tv?'<div class="kv"><b>Watch</b><span>'+esc(n.tv)+'</span></div>':'')+
+   (n.place?'<div class="kv"><b>Where</b><span>'+esc(n.place)+'</span></div>':'')+
+   (n.note?'<div class="kv"><b>Note</b><span>'+esc(n.note)+'</span></div>':'')+
+   '<div class="daysTo"><b>'+(days===0?'Today!':days===1?'Tomorrow':days+' days')+'</b>'+(days>1?' to kickoff':'')+'</div>'+
+   (SRC[n.src]?'<a class="srcBtn" href="'+esc(SRC[n.src].u)+'" target="_blank" rel="noopener">Game info on '+esc(srcHost(SRC[n.src].u))+' →</a>':'')+
+  '</div>';}
+ /* schedule */
+ var rows=F.games.map(function(g){var d=parseD(g.d);
+  var res=g.res?'<span class="wl '+(g.res==="W"?'w':'l')+'">'+g.res+'</span> '+esc(g.score)+(g.note==="Overtime"?' OT':''):'<span class="up">'+esc(g.time||'TBA')+'</span>';
+  return '<tr class="'+(g.res?'':'future')+'"><td class="dt">'+DOW[d.getDay()]+', '+MON[d.getMonth()]+' '+d.getDate()+'</td>'+
+   '<td><span class="ha">'+(g.ha==="A"?'@':'vs')+'</span> <b>'+esc(g.opp)+'</b>'+(g.conf?' <span class="cfTag">Big 12</span>':'')+(g.note&&g.note!=="Overtime"?'<div class="sub">'+esc(g.note)+'</div>':'')+'</td>'+
+   '<td class="res">'+res+'</td><td class="tv">'+esc(g.tv||'')+'</td></tr>';}).join('');
+ el.innerHTML=
+ '<div class="pageHero"><div class="wrap"><h1 class="disp">Wildcat Football</h1><p>'+F.season+' season · '+esc(F.coach)+'. Updated automatically each morning.</p>'+
+  '<div class="recPills"><span class="recPill"><b>'+r.txt+'</b> overall</span><span class="recPill"><b>'+rc.txt+'</b> Big 12</span><span class="recPill">AP: <b>'+esc(F.ranking.ap)+'</b></span><span class="recPill">CFP: <b>'+esc(F.ranking.cfp)+'</b></span></div></div></div>'+
+ '<div class="wrap pageBody">'+
+  '<div class="fbGrid">'+nextHTML+
+   '<div class="fbCard road '+cls+'"><h2 class="fbH">🏆 Road to a bowl game</h2>'+
+    '<div class="wdots" aria-label="'+r.w+' of 6 wins needed for bowl eligibility">'+dots+'</div>'+
+    '<p class="roadStatus">'+status+'</p>'+
+    (steps&&r.w<6?'<ol class="steps">'+steps+'</ol>':'')+
+    (scen?'<ul class="scen">'+scen+'</ul>':'')+
+    '<p class="muted small">'+esc(F.bowlNote)+' '+srcLink('fbbowl','Source →')+'</p></div>'+
+  '</div>'+
+  '<div class="fbGrid two">'+
+   '<div class="fbCard"><h2 class="fbH">📊 Big 12 &amp; rankings</h2><p>'+esc(F.confNote)+'</p><p>'+esc(F.top25)+' '+srcLink('fbtop25','Source →')+'</p>'+
+    '<p class="muted small">'+srcLink('b12st','Full Big 12 standings →')+'</p></div>'+
+   '<div class="fbCard"><h2 class="fbH">🏟️ Playoff picture</h2><p>'+esc(F.titleGame)+' '+srcLink('b12cg','Source →')+'</p></div>'+
+  '</div>'+
+  '<div class="secHead"><div><h2 class="disp">'+F.season+' Schedule &amp; Results</h2><p>Scores show K-State first.</p></div></div>'+
+  '<div class="tblWrap card" style="padding:6px 10px"><table class="fbTable"><thead><tr><th scope="col">Date</th><th scope="col">Opponent</th><th scope="col">Result / Time</th><th scope="col">TV</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+  '<div class="card" style="margin-top:18px"><h2 class="fbH">✈️ Looking ahead to 2027</h2><p style="margin:0">'+esc(F.next2027)+' '+srcLink('fb27b','Source →')+'</p></div>'+
+  '<p class="sources" style="margin-top:18px">Sources: '+srcLink('b12sch')+' · '+srcLink('fbsch')+' · '+srcLink('fb26wiki')+' · <a href="#sources">all sources</a></p>'+
+ '</div>';
 }
 
 /* ---------- NEWS ---------- */
@@ -547,7 +636,7 @@ setInterval(checkVersion,5*60*1000);
 document.addEventListener('visibilitychange',function(){ if(!document.hidden) checkVersion(); });
 
 /* ---------- ROUTER ---------- */
-var VIEWS={home:renderHome,news:renderNews,calendar:renderCalendar,finances:renderFinances,todos:renderTodos,needs:renderNeeds,sources:renderSources};
+var VIEWS={home:renderHome,news:renderNews,football:renderFootball,calendar:renderCalendar,finances:renderFinances,todos:renderTodos,needs:renderNeeds,sources:renderSources};
 function route(){
  var v=(location.hash||"#home").slice(1); if(!VIEWS[v]) v="home";
  document.querySelectorAll('section.page').forEach(function(s){s.classList.remove('show');});

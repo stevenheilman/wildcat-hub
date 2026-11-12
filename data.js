@@ -3,7 +3,7 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-12.1";   /* bump on every change (also in version.json) */
+var SITE_VERSION = "2026-11-12.9";   /* bump on every change (also in version.json) */
 var INFO_UPDATED = "Nov 12, 2026";
 var INFO_UPDATED_AT = "2026-11-12T05:24:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
@@ -48,6 +48,12 @@ var SRC = {
  aed:{t:"K-State News — High school students invited to explore aviation at K-State",u:"https://www.k-state.edu/news/articles/2026/10/kstate-salina-aviation-explorer-day.html",w:"Aviation Explorer Day, Sat Nov 14, 2026 at K-State Salina (free, registration required)",g:"Academics & calendar"},
  pacer:{t:"K-State News — Aviation students prepare Piper Pacer for museum exhibit",u:"https://www.k-state.edu/news/articles/2026/09/aviation-maintenance-management-students-prepare-piper-pacer-aircraft-for-museum-exhibit.html",w:"Sept 23, 2026: aviation maintenance students' hands-on project",g:"Holden's degree"},
  hol:{t:"K-State News — University holiday schedule announced",u:"https://www.k-state.edu/news/articles/2026/11/university-holiday-schedule-announced.html",w:"Nov 9, 2026: 2027 university holidays",g:"News & athletics"},
+ b12sch:{t:"Big 12 Conference — 2026 Kansas State Football Schedule",u:"https://big12sports.com/schedule.aspx?schedule=5306",w:"Official results and remaining 2026 games",g:"News & athletics"},
+ fbbowl:{t:"K-State Athletics — 'Focusing on the Things Within our Control'",u:"https://www.kstatesports.com/news/2026/11/10/sports-extra-focusing-on-the-things-within-our-control",w:"Need two of the last three games for bowl eligibility; Big 12 standing",g:"News & athletics"},
+ fbtop25:{t:"K-State Athletics — Focused on the Next Opponent",u:"https://www.kstatesports.com/news/2026/11/3/sports-extra-focused-on-the-next-opponent",w:"Big 12 teams in the AP Top 25 (early November)",g:"News & athletics"},
+ b12cg:{t:"2026 Big 12 Championship Game (Wikipedia)",u:"https://en.wikipedia.org/wiki/2026_Big_12_Championship_Game",w:"Fri, Dec 4, 2026 at AT&T Stadium",g:"News & athletics"},
+ b12st:{t:"FOX Sports — Big 12 Football Standings",u:"https://www.foxsports.com/college-football/big-12/standings",w:"Live Big 12 standings",g:"News & athletics"},
+ fb26wiki:{t:"2026 Kansas State Wildcats football team (Wikipedia)",u:"https://en.wikipedia.org/wiki/2026_Kansas_State_Wildcats_football_team",w:"Season summary, TV for each game, head coach",g:"News & athletics"},
  fb27b:{t:"Sports Brackets — K-State 2027 opponents",u:"https://sportsbrackets.net/2026/09/03/kansas-state-wildcats-future-opponents-schedule-by-year/",w:"2027 Big 12 home and away opponents",g:"News & athletics"}
 };
 
@@ -102,3 +108,34 @@ var EVENTS = [
  {d:"2028-05-05",c:"ac",t:"Last day of spring classes",s:"",src:"cal"},
  {d:"2028-05-08",c:"ac",t:"Spring final exams (May 8–12)",s:"Freshman year complete!",src:"cal"}
 ];
+
+/* ---------- FOOTBALL PAGE ----------
+   res: "W" | "L" | "" (not played yet). score is always K-State first. ha: "H" home, "A" away, "N" neutral.
+   The daily update fills in results, kickoff times/TV, rankings and the bowl picture. */
+var FOOTBALL = {
+  season: 2026,
+  asOf: "Nov 12, 2026",
+  coach: "Collin Klein (1st season as head coach)",
+  conf: "Big 12",
+  ranking: { ap: "Not ranked", cfp: "Not ranked" },
+  confNote: "1-5 in the Big 12 — tied with Colorado and Kansas for the fewest conference wins.",
+  top25: "Big 12 teams in the AP Top 25 in early November: No. 3 Utah, No. 7 BYU, No. 13 Texas Tech, No. 17 Houston and No. 24 Arizona.",
+  titleGame: "The Big 12 Championship Game is Friday, Dec. 4, 2026 at AT&T Stadium in Arlington, Texas — the winner earns an automatic College Football Playoff bid. K-State is out of the title race this year.",
+  bowlNote: "Teams need 6 wins to be bowl eligible (one win over an FCS team, like Nicholls, can count). K-State has been bowl eligible in 14 of the last 15 seasons.",
+  bowl: "",          /* e.g. "Bowl: Liberty Bowl vs. ___ · Dec 27 · ESPN" once announced */
+  games: [
+    {d:"2026-09-05",opp:"Nicholls",ha:"H",res:"W",score:"71-3",tv:"ESPN+",src:"b12sch"},
+    {d:"2026-09-12",opp:"Washington State",ha:"H",res:"W",score:"34-7",tv:"TNT / HBO Max",src:"b12sch"},
+    {d:"2026-09-19",opp:"Tulane",ha:"H",res:"W",score:"31-20",tv:"ESPN2",src:"b12sch"},
+    {d:"2026-09-26",opp:"Cincinnati",ha:"A",res:"L",score:"26-31",conf:1,src:"b12sch"},
+    {d:"2026-10-10",opp:"Houston",ha:"H",res:"L",score:"16-35",tv:"FOX",conf:1,src:"b12sch"},
+    {d:"2026-10-17",opp:"Kansas",ha:"H",res:"W",score:"35-24",tv:"FS1",conf:1,note:"Homecoming · 18th straight Sunflower Showdown win",src:"b12sch"},
+    {d:"2026-10-24",opp:"Arizona State",ha:"A",res:"L",score:"17-28",conf:1,src:"b12sch"},
+    {d:"2026-10-31",opp:"Colorado",ha:"A",res:"L",score:"24-27",note:"Overtime",tv:"TNT / HBO Max",conf:1,src:"b12sch"},
+    {d:"2026-11-07",opp:"Oklahoma State",ha:"H",res:"L",score:"28-66",tv:"TNT / HBO Max",conf:1,src:"b12sch"},
+    {d:"2026-11-14",opp:"TCU",ha:"A",res:"",time:"1:00 p.m. CT",tv:"ESPNU",place:"Amon G. Carter Stadium, Fort Worth, TX",conf:1,src:"n1"},
+    {d:"2026-11-21",opp:"Arizona",ha:"H",res:"",time:"TBA",place:"Bill Snyder Family Stadium, Manhattan, KS",note:"Senior Day",conf:1,src:"b12sch"},
+    {d:"2026-11-28",opp:"Iowa State",ha:"A",res:"",time:"TBA",place:"Jack Trice Stadium, Ames, IA",note:"Farmageddon",conf:1,src:"b12sch"}
+  ],
+  next2027: "Holden's freshman season! Home openers vs. South Dakota (Sep 4) and Georgia Southern (Sep 11) are tentative. Big 12 home games: Baylor, BYU, Cincinnati, Utah, West Virginia. Road: Arizona, UCF, Kansas, Texas Tech."
+};
