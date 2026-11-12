@@ -113,13 +113,13 @@ function renderHome(){
  var needLeft=STATE.needs.filter(function(n){return !n.got;}).length;
  var next=nextEvent();
  el.innerHTML=
- '<div class="hero"><div class="stripes"></div>'+goCatsHTML()+'<div class="wrap">'+
-  '<div><span class="eyebrow"><i></i>Accepted · Fall 2027</span>'+
+ '<div class="hero"><div class="stripes"></div><div class="wrap">'+
+  '<div class="heroText"><span class="eyebrow"><i></i>Accepted · Fall 2027</span>'+
   '<h1 class="big disp">Holden is a <span class="g">Wildcat</span><br><span class="o">K-State</span> Salina</h1>'+
   '<div class="degree"><div><div class="k">Bachelor of Science</div><div class="v">Aviation Maintenance Management ✈️🔧</div></div></div>'+
-  '<p class="lede">From home in Texas to Kansas State University Salina Aerospace and Technology Campus. Everything the family needs to get ready for freshman year — in one place.</p>'+
-  '<div class="chips"><span class="chip">🎓 Future Wildcat</span><span class="chip">📍 Salina, Kansas</span><span class="chip">🐾 Go Cats!</span></div></div>'+
-  '<div class="badgeWrap">'+EMBLEM(340,"h")+'</div>'+
+  '<p class="lede">From home in Texas to K-State Salina\'s Aerospace and Technology Campus — everything the family needs for freshman year, in one place.</p>'+
+  '<div class="chips"><span class="chip">🎓 Future Wildcat</span><span class="chip">📍 Salina, Kansas</span></div></div>'+
+  '<div class="heroArt">'+goCatsHTML()+'<div class="badgeWrap">'+EMBLEM(340,"h")+'</div></div>'+
  '</div></div>'+
  '<div class="wrap">'+
   '<div class="countdown"><div class="cdCard" role="timer" aria-label="Countdown to the first day of classes">'+
