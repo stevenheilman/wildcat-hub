@@ -3,9 +3,9 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-11.1";   /* bump on every change (also in version.json) */
-var INFO_UPDATED = "Nov 11, 2026";
-var INFO_UPDATED_AT = "2026-11-11T05:35:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
+var SITE_VERSION = "2026-11-12.1";   /* bump on every change (also in version.json) */
+var INFO_UPDATED = "Nov 12, 2026";
+var INFO_UPDATED_AT = "2026-11-12T05:24:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
@@ -45,6 +45,9 @@ var SRC = {
  man1:{t:"K-State News — Andy Thompson named interim dean of students",u:"https://www.k-state.edu/news/articles/2026/11/andy-thompson-named-interim-leader-of-dassa.html",w:"Nov 9, 2026 leadership announcement",g:"News & athletics"},
  bbtv:{t:"K-State Athletics — Times & TV for 2026-27 men's basketball",u:"https://www.kstatesports.com/news/2026/10/13/mens-basketball-k-state-announces-times-tv-for-2026-27-mens-basketball",w:"Tip times and TV for the full 2026-27 schedule",g:"News & athletics"},
  n10:{t:"WIBW — K-State men's basketball outduels Creighton",u:"https://www.wibw.com/2026/11/11/k-state-mens-basketball-outduels-creighton/",w:"Nov 10, 2026 game recap",g:"News & athletics"},
+ aed:{t:"K-State News — High school students invited to explore aviation at K-State",u:"https://www.k-state.edu/news/articles/2026/10/kstate-salina-aviation-explorer-day.html",w:"Aviation Explorer Day, Sat Nov 14, 2026 at K-State Salina (free, registration required)",g:"Academics & calendar"},
+ pacer:{t:"K-State News — Aviation students prepare Piper Pacer for museum exhibit",u:"https://www.k-state.edu/news/articles/2026/09/aviation-maintenance-management-students-prepare-piper-pacer-aircraft-for-museum-exhibit.html",w:"Sept 23, 2026: aviation maintenance students' hands-on project",g:"Holden's degree"},
+ hol:{t:"K-State News — University holiday schedule announced",u:"https://www.k-state.edu/news/articles/2026/11/university-holiday-schedule-announced.html",w:"Nov 9, 2026: 2027 university holidays",g:"News & athletics"},
  fb27b:{t:"Sports Brackets — K-State 2027 opponents",u:"https://sportsbrackets.net/2026/09/03/kansas-state-wildcats-future-opponents-schedule-by-year/",w:"2027 Big 12 home and away opponents",g:"News & athletics"}
 };
 
@@ -55,10 +58,10 @@ var NEWS = [
  {g:"ath",date:"Oct 17, 2026",t:"Sunflower Showdown streak hits 18 straight",s:"K-State beat Kansas 35-24 in front of a sellout crowd, piling up 359 rushing yards to extend the longest active rivalry win streak in the country.",src:"n2",by:"K-State Athletics"},
  {g:"sal",date:"Nov 9, 2026",t:"Salina can now test its own instrument-rating pilots",s:"The FAA granted K-State Salina self-examining authority for instrument ratings, so students can finish with an end-of-course check by campus flight instructors instead of waiting on an outside examiner — saving time and up to about $1,000 each.",src:"sal1",by:"K-State News"},
  {g:"sal",date:"Oct 19, 2026",t:"New Silicon Prairie Trailblazers scholarships",s:"K-State Salina will award $12,000 over two years to 40 incoming fall 2027 students in four emerging-tech programs (immersive systems, machine learning, robotics and uncrewed aircraft). Aviation maintenance isn't one of them.",src:"n5",by:"JC Post"},
- {g:"sal",date:"2026–2027",t:"Two new buildings transforming the Salina campus",s:"The K-AIRES AI research and entertainment studio is coming online, and the Aerospace Education Hub is slated to open in 2027 — right around Holden's freshman year.",src:"n6",by:"K-State Salina"},
+ {g:"sal",date:"Sep 23, 2026",t:"Maintenance students ready a vintage Piper for a museum",s:"Students in a 300-level aircraft design and assembly class pulled the wings and wheels off the campus's 1950 Piper Pacer, towed it to Salina's Garage Automotive Museum and put it back together for an exhibit running through Jan. 11, 2027 — the kind of hands-on work Holden's major is built around.",src:"pacer",by:"K-State News"},
+ {g:"man",date:"Nov 9, 2026",t:"2027 university holidays set",s:"K-State posted its 2027 holiday calendar, including Labor Day (Sept. 6), Thanksgiving (Nov. 25–26) and Christmas Eve and New Year's Eve observed closures; Veterans Day stays a regular workday.",src:"hol",by:"K-State News"},
  {g:"man",date:"Nov 9, 2026",t:"New interim leader for student affairs",s:"Longtime K-State administrator Andy Thompson was named interim vice president for academic success and student affairs and dean of students, effective immediately.",src:"man1",by:"K-State News"},
- {g:"man",date:"Oct 14, 2026",t:"President Linton heading to Virginia Tech",s:"K-State President Richard Linton announced he has been named Virginia Tech's next president and shared reflections on his time leading K-State.",src:"n8",by:"K-State News"},
- {g:"man",date:"Sep 2026",t:"Enrollment reaches its highest level since 2020",s:"K-State welcomed 21,283 students across Manhattan, Salina and Olathe this fall, and reports that 97% of 2025 graduates were employed or continuing their education.",src:"n9",by:"K-State News"}
+ {g:"man",date:"Oct 14, 2026",t:"President Linton heading to Virginia Tech",s:"K-State President Richard Linton announced he has been named Virginia Tech's next president and shared reflections on his time leading K-State.",src:"n8",by:"K-State News"}
 ];
 
 /* d=date, c=category, t=title, s=subtitle, time, place, tv, info (extra details), src=SRC key, star */
@@ -66,6 +69,7 @@ var EVENTS = [
  {d:"2026-11-07",c:"fb",t:"Football vs Oklahoma State",s:"Final: Oklahoma State 66, K-State 28",time:"12:00 p.m. CT",place:"Bill Snyder Family Stadium, Manhattan, KS",tv:"TNT / truTV",src:"live"},
  {d:"2026-11-10",c:"bb",t:"Basketball vs Creighton",s:"Final: K-State 89, Creighton 82",time:"8:00 p.m. CT",place:"Bramlage Coliseum, Manhattan, KS",tv:"FS1",src:"n10"},
  {d:"2026-11-14",c:"fb",t:"Football at TCU",s:"1:00 p.m. CT · ESPNU · Fort Worth, TX",time:"1:00 p.m. Central (kickoff)",place:"Amon G. Carter Stadium, Fort Worth, TX",tv:"ESPNU (stream on ESPN+) · Radio: K-State Sports Network",info:"K-State leads the all-time series 11-8.",src:"n1"},
+ {d:"2026-11-14",c:"or",t:"Aviation Explorer Day at K-State Salina",s:"Free visit day for aviation-minded high schoolers (16+) and guardians · starts 9:30 a.m.",time:"Starts 9:30 a.m. Central",place:"K-State Salina campus, Salina, KS",info:"Sessions on aviation programs (including aviation maintenance), alumni and careers; keynote by the aviation department head; lunch and a campus tour of residence halls and aviation facilities. Free, but advance registration is required.",src:"aed"},
  {d:"2026-11-16",c:"bb",t:"Basketball vs Montana",s:"7:00 p.m. CT · ESPN+ · Bramlage Coliseum",time:"7:00 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"ESPN+",src:"bbtv"},
  {d:"2026-11-21",c:"fb",t:"Football vs Arizona — Senior Day",s:"Manhattan · kickoff time TBA",time:"TBA — Big 12 expects to set the time and TV on Sun, Nov 15",place:"Bill Snyder Family Stadium, Manhattan, KS",info:"Last home game of 2026; seniors are honored before kickoff.",src:"fbsch"},
  {d:"2026-11-24",c:"bb",t:"Basketball vs Gonzaga",s:"11:30 p.m. CT · Players Era 16 · Las Vegas",time:"11:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPN",info:"Opening round of the Players Era 16 (Nov 24–28). K-State then plays Alabama or Baylor on Nov 26.",src:"pe16"},
