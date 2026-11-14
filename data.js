@@ -3,9 +3,9 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-13.1";   /* bump on every change (also in version.json) */
-var INFO_UPDATED = "Nov 13, 2026";
-var INFO_UPDATED_AT = "2026-11-13T05:23:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
+var SITE_VERSION = "2026-11-14.1";   /* bump on every change (also in version.json) */
+var INFO_UPDATED = "Nov 14, 2026";
+var INFO_UPDATED_AT = "2026-11-14T05:18:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
@@ -56,14 +56,15 @@ var SRC = {
  fb26wiki:{t:"2026 Kansas State Wildcats football team (Wikipedia)",u:"https://en.wikipedia.org/wiki/2026_Kansas_State_Wildcats_football_team",w:"Season summary, TV for each game, head coach",g:"News & athletics"},
  qb:{t:"Wichita Eagle via Yahoo Sports — Klein expects two QBs to play at TCU",u:"https://sports.yahoo.com/articles/why-collin-klein-expects-k-205202171.html",w:"Nov 9, 2026: quarterback competition after Avery Johnson injury",g:"News & athletics"},
  ap11:{t:"Deseret News — AP Top 25 after Utah beats BYU",u:"https://www.deseret.com/sports/2026/11/08/utah-defeats-byu-football-ap-top-25-poll-2026/",w:"AP poll released Nov 8, 2026",g:"News & athletics"},
+ bsb1:{t:"K-State Athletics — Baseball launches community-inspired uniform and retail line",u:"https://www.kstatesports.com/news/2026/11/12/baseball-k-state-to-launch-community-inspired-uniform-and-retail-line",w:"Nov 12, 2026: new 2027 uniforms and Nike gear",g:"News & athletics"},
  fb27b:{t:"Sports Brackets — K-State 2027 opponents",u:"https://sportsbrackets.net/2026/09/03/kansas-state-wildcats-future-opponents-schedule-by-year/",w:"2027 Big 12 home and away opponents",g:"News & athletics"}
 };
 
 var NEWS = [
+ {g:"ath",date:"Nov 12, 2026",t:"Baseball unveils Manhattan-inspired 2027 look",s:"K-State Baseball revealed new uniforms and Nike fan gear celebrating its roots in Manhattan. The first wave of retail items goes on sale Mon., Nov. 16 at 10 a.m., with the game uniform and cap following in March; 2027 season tickets go on sale in January.",src:"bsb1",by:"K-State Athletics"},
  {g:"ath",date:"Nov 10, 2026",t:"Rechsteiner's 26 lifts K-State past Creighton",s:"Brandon Rechsteiner scored 26 for the second straight game as the Wildcats beat Creighton 89-82 in Manhattan, shooting nearly 58% to move to 2-1. Montana visits Bramlage on Monday, Nov. 16.",src:"n10",by:"WIBW"},
  {g:"ath",date:"Nov 9, 2026",t:"Two quarterbacks likely to see action at TCU",s:"With starter Avery Johnson not expected back this season, Collin Klein says Blake Barnett and Dillon Duff are splitting first-team reps and he expects both to play in Fort Worth.",src:"qb",by:"Wichita Eagle"},
  {g:"ath",date:"Nov 9, 2026",t:"Cats head to Fort Worth for a 1 p.m. kickoff",s:"K-State (4-5) visits TCU on Saturday, Nov. 14 at Amon G. Carter Stadium. Kickoff is 1 p.m. Central on ESPNU, and K-State leads the all-time series 11-8.",src:"n1",by:"K-State Athletics"},
- {g:"ath",date:"Nov 7, 2026",t:"Oklahoma State rolls past K-State in Manhattan",s:"The Wildcats fell 66-28 to Oklahoma State at Bill Snyder Family Stadium, their third straight loss.",src:"live",by:"K-State Athletics"},
  {g:"sal",date:"Nov 9, 2026",t:"Salina can now test its own instrument-rating pilots",s:"The FAA granted K-State Salina self-examining authority for instrument ratings, so students can finish with an end-of-course check by campus flight instructors instead of waiting on an outside examiner — saving time and up to about $1,000 each.",src:"sal1",by:"K-State News"},
  {g:"sal",date:"Oct 19, 2026",t:"New Silicon Prairie Trailblazers scholarships",s:"K-State Salina will award $12,000 over two years to 40 incoming fall 2027 students in four emerging-tech programs (immersive systems, machine learning, robotics and uncrewed aircraft). Aviation maintenance isn't one of them.",src:"n5",by:"JC Post"},
  {g:"sal",date:"Sep 23, 2026",t:"Maintenance students ready a vintage Piper for a museum",s:"Students in a 300-level aircraft design and assembly class pulled the wings and wheels off the campus's 1950 Piper Pacer, towed it to Salina's Garage Automotive Museum and put it back together for an exhibit running through Jan. 11, 2027 — the kind of hands-on work Holden's major is built around.",src:"pacer",by:"K-State News"},
@@ -116,7 +117,7 @@ var EVENTS = [
    The daily update fills in results, kickoff times/TV, rankings and the bowl picture. */
 var FOOTBALL = {
   season: 2026,
-  asOf: "Nov 13, 2026",
+  asOf: "Nov 14, 2026",
   coach: "Collin Klein (1st season as head coach)",
   conf: "Big 12",
   ranking: { ap: "Not ranked", cfp: "Not ranked" },
