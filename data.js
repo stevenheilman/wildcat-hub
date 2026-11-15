@@ -3,9 +3,9 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-14.1";   /* bump on every change (also in version.json) */
-var INFO_UPDATED = "Nov 14, 2026";
-var INFO_UPDATED_AT = "2026-11-14T05:18:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
+var SITE_VERSION = "2026-11-15.1";   /* bump on every change (also in version.json) */
+var INFO_UPDATED = "Nov 15, 2026";
+var INFO_UPDATED_AT = "2026-11-15T05:40:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
@@ -57,14 +57,17 @@ var SRC = {
  qb:{t:"Wichita Eagle via Yahoo Sports — Klein expects two QBs to play at TCU",u:"https://sports.yahoo.com/articles/why-collin-klein-expects-k-205202171.html",w:"Nov 9, 2026: quarterback competition after Avery Johnson injury",g:"News & athletics"},
  ap11:{t:"Deseret News — AP Top 25 after Utah beats BYU",u:"https://www.deseret.com/sports/2026/11/08/utah-defeats-byu-football-ap-top-25-poll-2026/",w:"AP poll released Nov 8, 2026",g:"News & athletics"},
  bsb1:{t:"K-State Athletics — Baseball launches community-inspired uniform and retail line",u:"https://www.kstatesports.com/news/2026/11/12/baseball-k-state-to-launch-community-inspired-uniform-and-retail-line",w:"Nov 12, 2026: new 2027 uniforms and Nike gear",g:"News & athletics"},
+ tcu:{t:"K-State Athletics — K-State rally falls short at TCU, 20-10",u:"https://www.kstatesports.com/news/2026/11/14/football-k-state-rally-falls-short-at-tcu-20-10",w:"Nov 14, 2026 game recap; K-State now 4-6, 1-6 Big 12",g:"News & athletics"},
+ trav:{t:"Yahoo Sports — How K-State navigated FAA travel disruption to TCU",u:"https://sports.yahoo.com/articles/kansas-state-tcu-timeline-wildcats-175606814.html",w:"Nov 14, 2026: game-day flight after Friday's nationwide ground stop",g:"News & athletics"},
+ mbb:{t:"K-State Athletics — Men's Basketball",u:"https://www.kstatesports.com/sports/mens-basketball",w:"Results, upcoming tip times and latest news",g:"News & athletics"},
  fb27b:{t:"Sports Brackets — K-State 2027 opponents",u:"https://sportsbrackets.net/2026/09/03/kansas-state-wildcats-future-opponents-schedule-by-year/",w:"2027 Big 12 home and away opponents",g:"News & athletics"}
 };
 
 var NEWS = [
+ {g:"ath",date:"Nov 14, 2026",t:"Late rally comes up short at TCU",s:"After a nationwide FAA ground stop scrubbed Friday's flight, the Cats flew to Fort Worth on game morning and fell 20-10. Dillon Duff threw for 244 yards, including a 53-yard score to Jaron Tibbs (8 catches, 115 yards); K-State is now 4-6 and must beat Arizona and Iowa State to reach a bowl.",src:"tcu",by:"K-State Athletics"},
  {g:"ath",date:"Nov 12, 2026",t:"Baseball unveils Manhattan-inspired 2027 look",s:"K-State Baseball revealed new uniforms and Nike fan gear celebrating its roots in Manhattan. The first wave of retail items goes on sale Mon., Nov. 16 at 10 a.m., with the game uniform and cap following in March; 2027 season tickets go on sale in January.",src:"bsb1",by:"K-State Athletics"},
  {g:"ath",date:"Nov 10, 2026",t:"Rechsteiner's 26 lifts K-State past Creighton",s:"Brandon Rechsteiner scored 26 for the second straight game as the Wildcats beat Creighton 89-82 in Manhattan, shooting nearly 58% to move to 2-1. Montana visits Bramlage on Monday, Nov. 16.",src:"n10",by:"WIBW"},
  {g:"ath",date:"Nov 9, 2026",t:"Two quarterbacks likely to see action at TCU",s:"With starter Avery Johnson not expected back this season, Collin Klein says Blake Barnett and Dillon Duff are splitting first-team reps and he expects both to play in Fort Worth.",src:"qb",by:"Wichita Eagle"},
- {g:"ath",date:"Nov 9, 2026",t:"Cats head to Fort Worth for a 1 p.m. kickoff",s:"K-State (4-5) visits TCU on Saturday, Nov. 14 at Amon G. Carter Stadium. Kickoff is 1 p.m. Central on ESPNU, and K-State leads the all-time series 11-8.",src:"n1",by:"K-State Athletics"},
  {g:"sal",date:"Nov 9, 2026",t:"Salina can now test its own instrument-rating pilots",s:"The FAA granted K-State Salina self-examining authority for instrument ratings, so students can finish with an end-of-course check by campus flight instructors instead of waiting on an outside examiner — saving time and up to about $1,000 each.",src:"sal1",by:"K-State News"},
  {g:"sal",date:"Oct 19, 2026",t:"New Silicon Prairie Trailblazers scholarships",s:"K-State Salina will award $12,000 over two years to 40 incoming fall 2027 students in four emerging-tech programs (immersive systems, machine learning, robotics and uncrewed aircraft). Aviation maintenance isn't one of them.",src:"n5",by:"JC Post"},
  {g:"sal",date:"Sep 23, 2026",t:"Maintenance students ready a vintage Piper for a museum",s:"Students in a 300-level aircraft design and assembly class pulled the wings and wheels off the campus's 1950 Piper Pacer, towed it to Salina's Garage Automotive Museum and put it back together for an exhibit running through Jan. 11, 2027 — the kind of hands-on work Holden's major is built around.",src:"pacer",by:"K-State News"},
@@ -77,14 +80,16 @@ var NEWS = [
 var EVENTS = [
  {d:"2026-11-07",c:"fb",t:"Football vs Oklahoma State",s:"Final: Oklahoma State 66, K-State 28",time:"12:00 p.m. CT",place:"Bill Snyder Family Stadium, Manhattan, KS",tv:"TNT / truTV",src:"live"},
  {d:"2026-11-10",c:"bb",t:"Basketball vs Creighton",s:"Final: K-State 89, Creighton 82",time:"8:00 p.m. CT",place:"Bramlage Coliseum, Manhattan, KS",tv:"FS1",src:"n10"},
- {d:"2026-11-14",c:"fb",t:"Football at TCU",s:"1:00 p.m. CT · ESPNU · Fort Worth, TX",time:"1:00 p.m. Central (kickoff)",place:"Amon G. Carter Stadium, Fort Worth, TX",tv:"ESPNU (stream on ESPN+) · Radio: K-State Sports Network",info:"K-State leads the all-time series 11-8.",src:"n1"},
+ {d:"2026-11-14",c:"fb",t:"Football at TCU",s:"Final: TCU 20, K-State 10",time:"1:00 p.m. Central (kickoff)",place:"Amon G. Carter Stadium, Fort Worth, TX",tv:"ESPNU (stream on ESPN+) · Radio: K-State Sports Network",info:"Duff threw for 244 yards and a 53-yard TD to Jaron Tibbs; a late fumble ended K-State's last drive. The team flew in on game morning after Friday's FAA ground stop.",src:"tcu"},
  {d:"2026-11-14",c:"or",t:"Aviation Explorer Day at K-State Salina",s:"Free visit day for aviation-minded high schoolers (16+) and guardians · starts 9:30 a.m.",time:"Starts 9:30 a.m. Central",place:"K-State Salina campus, Salina, KS",info:"Sessions on aviation programs (including aviation maintenance), alumni and careers; keynote by the aviation department head; lunch and a campus tour of residence halls and aviation facilities. Free, but advance registration is required.",src:"aed"},
  {d:"2026-11-16",c:"bb",t:"Basketball vs Montana",s:"7:00 p.m. CT · ESPN+ · Bramlage Coliseum",time:"7:00 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"ESPN+",src:"bbtv"},
- {d:"2026-11-21",c:"fb",t:"Football vs Arizona — Senior Day",s:"Manhattan · kickoff time TBA",time:"TBA — Big 12 expects to set the time and TV on Sun, Nov 15",place:"Bill Snyder Family Stadium, Manhattan, KS",info:"Last home game of 2026; seniors are honored before kickoff.",src:"fbsch"},
+ {d:"2026-11-20",c:"bb",t:"Basketball vs Campbell",s:"7:00 p.m. CT",time:"7:00 p.m. Central",src:"mbb"},
+ {d:"2026-11-21",c:"fb",t:"Football vs Arizona — Senior Day",s:"Manhattan · kickoff time TBA",time:"TBA — time and TV expected to be set Sun, Nov 15",info:"Last home game of 2026; seniors are honored before kickoff. K-State (4-6) needs to win both remaining games to become bowl eligible.",place:"Bill Snyder Family Stadium, Manhattan, KS",src:"fbsch"},
  {d:"2026-11-24",c:"bb",t:"Basketball vs Gonzaga",s:"11:30 p.m. CT · Players Era 16 · Las Vegas",time:"11:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPN",info:"Opening round of the Players Era 16 (Nov 24–28). K-State then plays Alabama or Baylor on Nov 26.",src:"pe16"},
  {d:"2026-11-28",c:"fb",t:"Football at Iowa State",s:"Ames, IA · regular-season finale · time TBA",time:"TBA",place:"Jack Trice Stadium, Ames, IA",src:"fbsch"},
  {d:"2026-12-01",c:"dl",t:"Scholarship priority date",s:"Freshman priority date for K-State scholarship consideration",info:"Applying and being admitted by Dec 1 gives the best chance at scholarships.",src:"prio"},
  {d:"2026-12-04",c:"bb",t:"Basketball at Seton Hall",s:"6:00 p.m. CT · truTV",time:"6:00 p.m. Central",tv:"truTV",src:"bbtv"},
+ {d:"2026-12-08",c:"bb",t:"Basketball vs IU Indy",s:"8:00 p.m. CT",time:"8:00 p.m. Central",src:"mbb"},
  {d:"2026-12-11",c:"bb",t:"Basketball vs Wichita State",s:"7:30 p.m. CT · TNT/truTV · Kansas City, MO",time:"7:30 p.m. Central",place:"Kansas City, MO (neutral site)",tv:"TNT / truTV",info:"In-state matchup played in Kansas City.",src:"bbtv"},
  {d:"2026-12-15",c:"dl",t:"Competitive scholarship applications due",s:"Supplemental applications for incoming domestic freshmen",src:"compdl"},
  {d:"2027-01-05",c:"bb",t:"Basketball vs Houston — Big 12 home opener",s:"7:30 p.m. CT · FS1 · Bramlage Coliseum",time:"7:30 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"FS1",src:"bbtv"},
@@ -117,14 +122,14 @@ var EVENTS = [
    The daily update fills in results, kickoff times/TV, rankings and the bowl picture. */
 var FOOTBALL = {
   season: 2026,
-  asOf: "Nov 14, 2026",
+  asOf: "Nov 15, 2026",
   coach: "Collin Klein (1st season as head coach)",
   conf: "Big 12",
   ranking: { ap: "Not ranked", cfp: "Not ranked" },
-  confNote: "1-5 in the Big 12 — tied with Colorado and Kansas for the fewest conference wins.",
-  top25: "Big 12 teams in the AP Top 25 released Nov. 8: No. 2 Utah, No. 10 Texas Tech, No. 12 BYU, No. 14 Houston and No. 22 Arizona.",
+  confNote: "1-6 in Big 12 play after the loss at TCU, near the bottom of the standings; 4-6 overall.",
+  top25: "Big 12 teams in the most recent AP Top 25 (released Nov. 8; the next poll comes out Sunday afternoon, Nov. 15): No. 2 Utah, No. 10 Texas Tech, No. 12 BYU, No. 14 Houston and No. 22 Arizona.",
   titleGame: "The Big 12 Championship Game is Friday, Dec. 4, 2026 at AT&T Stadium in Arlington, Texas — the winner earns an automatic College Football Playoff bid. K-State is out of the title race this year.",
-  bowlNote: "Teams need 6 wins to be bowl eligible (one win over an FCS team, like Nicholls, can count). K-State has been bowl eligible in 14 of the last 15 seasons.",
+  bowlNote: "Teams need 6 wins to be bowl eligible (one win over an FCS team, like Nicholls, can count). K-State has been bowl eligible in 14 of the last 15 seasons. At 4-6, the Cats must beat both Arizona and Iowa State to get to six wins.",
   bowl: "",          /* e.g. "Bowl: Liberty Bowl vs. ___ · Dec 27 · ESPN" once announced */
   games: [
     {d:"2026-09-05",opp:"Nicholls",ha:"H",res:"W",score:"71-3",tv:"ESPN+",src:"b12sch"},
@@ -136,7 +141,7 @@ var FOOTBALL = {
     {d:"2026-10-24",opp:"Arizona State",ha:"A",res:"L",score:"17-28",conf:1,src:"b12sch"},
     {d:"2026-10-31",opp:"Colorado",ha:"A",res:"L",score:"24-27",note:"Overtime",tv:"TNT / HBO Max",conf:1,src:"b12sch"},
     {d:"2026-11-07",opp:"Oklahoma State",ha:"H",res:"L",score:"28-66",tv:"TNT / HBO Max",conf:1,src:"b12sch"},
-    {d:"2026-11-14",opp:"TCU",ha:"A",res:"",time:"1:00 p.m. CT",tv:"ESPNU",place:"Amon G. Carter Stadium, Fort Worth, TX",conf:1,src:"n1"},
+    {d:"2026-11-14",opp:"TCU",ha:"A",res:"L",score:"10-20",time:"1:00 p.m. CT",tv:"ESPNU",place:"Amon G. Carter Stadium, Fort Worth, TX",note:"Team flew in on game morning after Friday's FAA ground stop",conf:1,src:"tcu"},
     {d:"2026-11-21",opp:"Arizona",ha:"H",res:"",time:"TBA",place:"Bill Snyder Family Stadium, Manhattan, KS",note:"Senior Day",conf:1,src:"b12sch"},
     {d:"2026-11-28",opp:"Iowa State",ha:"A",res:"",time:"TBA",place:"Jack Trice Stadium, Ames, IA",note:"Farmageddon",conf:1,src:"b12sch"}
   ],
