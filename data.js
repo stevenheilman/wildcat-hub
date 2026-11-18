@@ -3,9 +3,9 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-17.1";   /* bump on every change (also in version.json) */
-var INFO_UPDATED = "Nov 17, 2026";
-var INFO_UPDATED_AT = "2026-11-17T05:24:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
+var SITE_VERSION = "2026-11-18.1";   /* bump on every change (also in version.json) */
+var INFO_UPDATED = "Nov 18, 2026";
+var INFO_UPDATED_AT = "2026-11-18T05:34:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
@@ -68,6 +68,9 @@ var SRC = {
  ap12:{t:"College Football News — AP Top 25, Week 12",u:"https://collegefootballnews.com/college-football/ap-top-25-poll-week-12-four-new-teams-big-ten-rockets-up",w:"AP poll released Nov 16, 2026",g:"News & athletics"},
  ksfb:{t:"K-State News — Help choose the 2027 K-State First Book",u:"https://www.k-state.edu/news/articles/2026/11/kstate-first-book-common-read-selection-feedback-2027.html",w:"Nov 13, 2026: three finalists; feedback due Dec 1",g:"Academics & calendar"},
  cfair:{t:"K-State News — All-University Career Fair",u:"https://www.k-state.edu/news/articles/2026/11/all-university-career-fair-connects-students-employers.html",w:"Nov 13, 2026: attendance and employer numbers",g:"News & athletics"},
+ cfp3:{t:"NCAA.com — Third College Football Playoff rankings of 2026",u:"https://www.ncaa.com/news/football/article/2026-11-17/georgia-leads-texas-enters-top-five-third-college-football-playoff-rankings-2026",w:"CFP Top 25 released Nov 17, 2026",g:"News & athletics"},
+ kbor1:{t:"K-State News — KBOR to name interim president at Nov. 18 meeting",u:"https://www.k-state.edu/news/articles/2026/11/kansas-board-of-regents-november-meeting.html",w:"Nov 18, 2026 Regents meeting on the Manhattan campus; FY2028 housing/food rate proposals",g:"News & athletics"},
+ lint:{t:"Kansas State Collegian — President Linton to leave for Virginia Tech",u:"https://kstatecollegian.com/2026/10/13/k-state-president-richard-linton-to-leave-wildcats-for-virginia-tech/",w:"Linton stays through fall semester; starts at Virginia Tech Jan. 11, 2027",g:"News & athletics"},
  fb27b:{t:"Sports Brackets — K-State 2027 opponents",u:"https://sportsbrackets.net/2026/09/03/kansas-state-wildcats-future-opponents-schedule-by-year/",w:"2027 Big 12 home and away opponents",g:"News & athletics"}
 };
 
@@ -79,9 +82,9 @@ var NEWS = [
  {g:"sal",date:"Nov 9, 2026",t:"Salina can now test its own instrument-rating pilots",s:"The FAA granted K-State Salina self-examining authority for instrument ratings, so students can finish with an end-of-course check by campus flight instructors instead of waiting on an outside examiner — saving time and up to about $1,000 each.",src:"sal1",by:"K-State News"},
  {g:"sal",date:"Oct 19, 2026",t:"New Silicon Prairie Trailblazers scholarships",s:"K-State Salina will award $12,000 over two years to 40 incoming fall 2027 students in four emerging-tech programs (immersive systems, machine learning, robotics and uncrewed aircraft). Aviation maintenance isn't one of them.",src:"n5",by:"JC Post"},
  {g:"sal",date:"Sep 23, 2026",t:"Maintenance students ready a vintage Piper for a museum",s:"Students in a 300-level aircraft design and assembly class pulled the wings and wheels off the campus's 1950 Piper Pacer, towed it to Salina's Garage Automotive Museum and put it back together for an exhibit running through Jan. 11, 2027 — the kind of hands-on work Holden's major is built around.",src:"pacer",by:"K-State News"},
+ {g:"man",date:"Nov 18, 2026",t:"Regents to pick an interim K-State president",s:"The Kansas Board of Regents meets Wed., Nov. 18 (1:30 p.m.) on the Manhattan campus and is set to name an interim leader to follow President Richard Linton, who leaves for Virginia Tech in January. The board will also get a first look at proposed 2027–28 housing and dining rates — no vote on those yet.",src:"kbor1",by:"K-State News"},
  {g:"man",date:"Nov 13, 2026",t:"Help pick the book incoming students will read",s:"K-State First Book named three finalists for its 2027 common read — the shared book new students discuss when they arrive — and is taking feedback through Dec. 1. The finalists are Firekeeper's Daughter, The Art Thieves and Remarkably Bright Creatures.",src:"ksfb",by:"K-State News"},
  {g:"man",date:"Nov 13, 2026",t:"Record freshman turnout at the career fair",s:"Close to 3,700 students met with 461 employers at the three-day All-University Career Fair in Bramlage Coliseum, including a record of nearly 1,000 first-year students.",src:"cfair",by:"K-State News"},
- {g:"man",date:"Nov 9, 2026",t:"2027 university holidays set",s:"K-State posted its 2027 holiday calendar, including Labor Day (Sept. 6), Thanksgiving (Nov. 25–26) and Christmas Eve and New Year's Eve observed closures; Veterans Day stays a regular workday.",src:"hol",by:"K-State News"}
 ];
 
 /* d=date, c=category, t=title, s=subtitle, time, place, tv, info (extra details), src=SRC key, star */
@@ -131,12 +134,12 @@ var EVENTS = [
    The daily update fills in results, kickoff times/TV, rankings and the bowl picture. */
 var FOOTBALL = {
   season: 2026,
-  asOf: "Nov 17, 2026",
+  asOf: "Nov 18, 2026",
   coach: "Collin Klein (1st season as head coach)",
   conf: "Big 12",
-  ranking: { ap: "Not ranked", cfp: "Not ranked" },
+  ranking: { ap: "Not ranked", cfp: "Not ranked (CFP rankings of Nov. 17)" },
   confNote: "1-6 in Big 12 play after the loss at TCU, near the bottom of the standings; 4-6 overall.",
-  top25: "Big 12 teams in the Week 12 AP Top 25 (released Mon., Nov. 16): No. 2 Utah, No. 11 Texas Tech, No. 12 BYU, No. 19 Arizona — K-State's Senior Day opponent — and No. 20 Houston.",
+  top25: "Big 12 teams in the Week 12 AP Top 25 (released Mon., Nov. 16): No. 2 Utah, No. 11 Texas Tech, No. 12 BYU, No. 19 Arizona — K-State's Senior Day opponent — and No. 20 Houston. In the third CFP rankings (Tue., Nov. 17): No. 2 Utah, No. 10 BYU, No. 12 Texas Tech, No. 19 Arizona and No. 20 Houston.",
   titleGame: "The Big 12 Championship Game is Friday, Dec. 4, 2026 at AT&T Stadium in Arlington, Texas — the winner earns an automatic College Football Playoff bid. K-State is out of the title race this year.",
   bowlNote: "Teams need 6 wins to be bowl eligible (one win over an FCS team, like Nicholls, can count). K-State has been bowl eligible in 14 of the last 15 seasons. At 4-6, the Cats must beat both Arizona and Iowa State to get to six wins.",
   bowl: "",          /* e.g. "Bowl: Liberty Bowl vs. ___ · Dec 27 · ESPN" once announced */
@@ -151,7 +154,7 @@ var FOOTBALL = {
     {d:"2026-10-31",opp:"Colorado",ha:"A",res:"L",score:"24-27",note:"Overtime",tv:"TNT / HBO Max",conf:1,src:"b12sch"},
     {d:"2026-11-07",opp:"Oklahoma State",ha:"H",res:"L",score:"28-66",tv:"TNT / HBO Max",conf:1,src:"b12sch"},
     {d:"2026-11-14",opp:"TCU",ha:"A",res:"L",score:"10-20",time:"1:00 p.m. CT",tv:"ESPNU",place:"Amon G. Carter Stadium, Fort Worth, TX",note:"Team flew in on game morning after Friday's FAA ground stop",conf:1,src:"tcu"},
-    {d:"2026-11-21",opp:"Arizona",ha:"H",res:"",time:"6:00 p.m. CT",tv:"FS1",place:"Bill Snyder Family Stadium, Manhattan, KS",note:"Senior Day · vs. No. 19 Arizona (AP) · first Big 12 meeting",conf:1,src:"azt"},
+    {d:"2026-11-21",opp:"Arizona",ha:"H",res:"",time:"6:00 p.m. CT",tv:"FS1",place:"Bill Snyder Family Stadium, Manhattan, KS",note:"Senior Day · vs. No. 19 Arizona (AP and CFP) · first Big 12 meeting",conf:1,src:"azt"},
     {d:"2026-11-28",opp:"Iowa State",ha:"A",res:"",time:"1:00 p.m. CT",tv:"ESPN+",place:"Jack Trice Stadium, Ames, IA",note:"Farmageddon",conf:1,src:"isu"}
   ],
   next2027: "Holden's freshman season! Home openers vs. South Dakota (Sep 4) and Georgia Southern (Sep 11) are tentative. Big 12 home games: Baylor, BYU, Cincinnati, Utah, West Virginia. Road: Arizona, UCF, Kansas, Texas Tech."
