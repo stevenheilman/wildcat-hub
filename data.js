@@ -3,9 +3,9 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-19.1";   /* bump on every change (also in version.json) */
-var INFO_UPDATED = "Nov 19, 2026";
-var INFO_UPDATED_AT = "2026-11-19T05:29:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
+var SITE_VERSION = "2026-11-20.1";   /* bump on every change (also in version.json) */
+var INFO_UPDATED = "Nov 20, 2026";
+var INFO_UPDATED_AT = "2026-11-20T05:19:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
@@ -74,14 +74,15 @@ var SRC = {
  intp:{t:"Kansas State Collegian — Marc Johnson named K-State interim president",u:"https://kstatecollegian.com/2026/11/18/marc-johnson-named-k-state-interim-president/",w:"Nov 18, 2026: Regents pick former ag dean; starts Jan. 11, 2027",g:"News & athletics"},
  camp:{t:"Campbell Athletics — Camels face Oklahoma for first time",u:"https://gocamels.com/news/2026/11/17/mens-basketball-camels-face-oklahoma-for-first-time.aspx",w:"Campbell at K-State Friday: 7 p.m. CT on ESPN+",g:"News & athletics"},
  azp:{t:"Salina Post — K-State concludes home slate with Arizona",u:"https://salinapost.com/posts/0c7cdbb7-2b13-4c54-a154-4cc81d541722",w:"Arizona preview: FS1 at 6 p.m. CT, 13 seniors honored, series history",g:"News & athletics"},
+ azfl:{t:"Field Level Media — QB contrast highlights No. 19 Arizona's trip to K-State",u:"https://fieldlevelmedia.com/ncaaf/qb-contrast-highlights-no-19-arizonas-trip-to-kansas-state/",w:"Nov 18, 2026 preview: records, quarterbacks, bowl stakes",g:"News & athletics"},
  fb27b:{t:"Sports Brackets — K-State 2027 opponents",u:"https://sportsbrackets.net/2026/09/03/kansas-state-wildcats-future-opponents-schedule-by-year/",w:"2027 Big 12 home and away opponents",g:"News & athletics"}
 };
 
 var NEWS = [
+ {g:"ath",date:"Nov 18, 2026",t:"Duff in line for third start against No. 19 Arizona",s:"Arizona (7-3, 4-3 Big 12) comes to Manhattan for Saturday's Senior Day game after a one-point loss to No. 2 Utah, led by veteran QB Noah Fifita. K-State (4-6) has lost four in a row and is expected to start Dillon Duff, its fourth starter of the season; a loss would end the Cats' bowl hopes.",src:"azfl",by:"Field Level Media"},
  {g:"ath",date:"Nov 16, 2026",t:"Both remaining football kickoffs now set",s:"Saturday's Senior Day game with No. 19 Arizona kicks off at 6 p.m. Central on FS1, and the Nov. 28 finale at Iowa State is a 1 p.m. Central start streaming on ESPN+. The Cats (4-6) need to win both to become bowl eligible.",src:"isu",by:"FBSchedules / K-State Athletics"},
  {g:"ath",date:"Nov 16, 2026",t:"Wildcats roll past Montana by 41",s:"Five players scored in double figures, led by Isaiah Abraham's 16, as K-State held Montana to 45 points in an 86-45 home win. The Cats (3-1) have won three straight and host Campbell on Friday at 7 p.m.",src:"mont",by:"K-State Athletics"},
  {g:"ath",date:"Nov 14, 2026",t:"Late rally comes up short at TCU",s:"After a nationwide FAA ground stop scrubbed Friday's flight, the Cats flew to Fort Worth on game morning and fell 20-10. Dillon Duff threw for 244 yards, including a 53-yard score to Jaron Tibbs (8 catches, 115 yards); K-State is now 4-6 and must beat Arizona and Iowa State to reach a bowl.",src:"tcu",by:"K-State Athletics"},
- {g:"ath",date:"Nov 12, 2026",t:"Baseball unveils Manhattan-inspired 2027 look",s:"K-State Baseball revealed new uniforms and Nike fan gear celebrating its roots in Manhattan. The first wave of retail items goes on sale Mon., Nov. 16 at 10 a.m., with the game uniform and cap following in March; 2027 season tickets go on sale in January.",src:"bsb1",by:"K-State Athletics"},
  {g:"sal",date:"Nov 9, 2026",t:"Salina can now test its own instrument-rating pilots",s:"The FAA granted K-State Salina self-examining authority for instrument ratings, so students can finish with an end-of-course check by campus flight instructors instead of waiting on an outside examiner — saving time and up to about $1,000 each.",src:"sal1",by:"K-State News"},
  {g:"sal",date:"Oct 19, 2026",t:"New Silicon Prairie Trailblazers scholarships",s:"K-State Salina will award $12,000 over two years to 40 incoming fall 2027 students in four emerging-tech programs (immersive systems, machine learning, robotics and uncrewed aircraft). Aviation maintenance isn't one of them.",src:"n5",by:"JC Post"},
  {g:"sal",date:"Sep 23, 2026",t:"Maintenance students ready a vintage Piper for a museum",s:"Students in a 300-level aircraft design and assembly class pulled the wings and wheels off the campus's 1950 Piper Pacer, towed it to Salina's Garage Automotive Museum and put it back together for an exhibit running through Jan. 11, 2027 — the kind of hands-on work Holden's major is built around.",src:"pacer",by:"K-State News"},
@@ -97,8 +98,8 @@ var EVENTS = [
  {d:"2026-11-14",c:"fb",t:"Football at TCU",s:"Final: TCU 20, K-State 10",time:"1:00 p.m. Central (kickoff)",place:"Amon G. Carter Stadium, Fort Worth, TX",tv:"ESPNU (stream on ESPN+) · Radio: K-State Sports Network",info:"Duff threw for 244 yards and a 53-yard TD to Jaron Tibbs; a late fumble ended K-State's last drive. The team flew in on game morning after Friday's FAA ground stop.",src:"tcu"},
  {d:"2026-11-14",c:"or",t:"Aviation Explorer Day at K-State Salina",s:"Free visit day for aviation-minded high schoolers (16+) and guardians · starts 9:30 a.m.",time:"Starts 9:30 a.m. Central",place:"K-State Salina campus, Salina, KS",info:"Sessions on aviation programs (including aviation maintenance), alumni and careers; keynote by the aviation department head; lunch and a campus tour of residence halls and aviation facilities. Free, but advance registration is required.",src:"aed"},
  {d:"2026-11-16",c:"bb",t:"Basketball vs Montana",s:"Final: K-State 86, Montana 45",time:"7:00 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"ESPN+ · Radio: K-State Sports Network",info:"Isaiah Abraham led five Wildcats in double figures with 16; K-State moved to 3-1.",src:"mont"},
- {d:"2026-11-20",c:"bb",t:"Basketball vs Campbell",s:"7:00 p.m. CT · ESPN+ · Bramlage Coliseum",time:"7:00 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"ESPN+ · Radio: K-State Sports Network",info:"K-State (3-1) has won three straight; Campbell picked up its first win of the season earlier this week.",src:"camp"},
- {d:"2026-11-21",c:"fb",t:"Football vs Arizona — Senior Day",s:"Manhattan · 6:00 p.m. CT · FS1",time:"6:00 p.m. Central (kickoff)",tv:"FS1 · Radio: K-State Sports Network",info:"Last home game of 2026 and the first Big 12 meeting with No. 19 Arizona (Arizona leads the all-time series 6-2-1). K-State honors 13 seniors before kickoff; radio pregame starts at 4 p.m. K-State (4-6) needs to win both remaining games to become bowl eligible.",place:"Bill Snyder Family Stadium, Manhattan, KS",src:"azt"},
+ {d:"2026-11-20",c:"bb",t:"Basketball vs Campbell",s:"7:00 p.m. CT · ESPN+ · Bramlage Coliseum",time:"7:00 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"ESPN+ · Radio: K-State Sports Network",info:"K-State (3-1) has won three straight; Campbell comes in at 1-4. Gonzaga in Las Vegas is next (Tue., Nov. 24).",src:"camp"},
+ {d:"2026-11-21",c:"fb",t:"Football vs Arizona — Senior Day",s:"Manhattan · 6:00 p.m. CT · FS1",time:"6:00 p.m. Central (kickoff)",tv:"FS1 · Radio: K-State Sports Network",info:"Last home game of 2026 and the first Big 12 meeting with No. 19 Arizona (7-3, 4-3 Big 12), which just lost 40-39 to No. 2 Utah. Arizona leads the all-time series 6-2-1. K-State honors 13 seniors before kickoff; radio pregame starts at 4 p.m. K-State (4-6) needs to win both remaining games to become bowl eligible.",place:"Bill Snyder Family Stadium, Manhattan, KS",src:"azt"},
  {d:"2026-11-24",c:"bb",t:"Basketball vs Gonzaga",s:"11:30 p.m. CT · Players Era 16 · Las Vegas",time:"11:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPN",info:"Opening round of the Players Era 16 (Nov 24–28). K-State then plays Alabama or Baylor on Nov 26.",src:"pe16"},
  {d:"2026-11-28",c:"fb",t:"Football at Iowa State",s:"Ames, IA · regular-season finale · 1:00 p.m. CT · ESPN+",time:"1:00 p.m. Central (kickoff)",place:"Jack Trice Stadium, Ames, IA",tv:"ESPN+ · Radio: K-State Sports Network",info:"Farmageddon. K-State needs a win here (and vs. Arizona) to reach six wins and bowl eligibility.",src:"isu"},
  {d:"2026-12-01",c:"dl",t:"Scholarship priority date",s:"Freshman priority date for K-State scholarship consideration",info:"Applying and being admitted by Dec 1 gives the best chance at scholarships.",src:"prio"},
@@ -137,7 +138,7 @@ var EVENTS = [
    The daily update fills in results, kickoff times/TV, rankings and the bowl picture. */
 var FOOTBALL = {
   season: 2026,
-  asOf: "Nov 19, 2026",
+  asOf: "Nov 20, 2026",
   coach: "Collin Klein (1st season as head coach)",
   conf: "Big 12",
   ranking: { ap: "Not ranked", cfp: "Not ranked (CFP rankings of Nov. 17)" },
@@ -157,7 +158,7 @@ var FOOTBALL = {
     {d:"2026-10-31",opp:"Colorado",ha:"A",res:"L",score:"24-27",note:"Overtime",tv:"TNT / HBO Max",conf:1,src:"b12sch"},
     {d:"2026-11-07",opp:"Oklahoma State",ha:"H",res:"L",score:"28-66",tv:"TNT / HBO Max",conf:1,src:"b12sch"},
     {d:"2026-11-14",opp:"TCU",ha:"A",res:"L",score:"10-20",time:"1:00 p.m. CT",tv:"ESPNU",place:"Amon G. Carter Stadium, Fort Worth, TX",note:"Team flew in on game morning after Friday's FAA ground stop",conf:1,src:"tcu"},
-    {d:"2026-11-21",opp:"Arizona",ha:"H",res:"",time:"6:00 p.m. CT",tv:"FS1",place:"Bill Snyder Family Stadium, Manhattan, KS",note:"Senior Day (13 seniors honored) · vs. No. 19 Arizona (AP and CFP) · first Big 12 meeting · Arizona leads series 6-2-1",conf:1,src:"azt"},
+    {d:"2026-11-21",opp:"Arizona",ha:"H",res:"",time:"6:00 p.m. CT",tv:"FS1",place:"Bill Snyder Family Stadium, Manhattan, KS",note:"Senior Day (13 seniors honored) · vs. No. 19 Arizona (AP and CFP; 7-3) · first Big 12 meeting · Arizona leads series 6-2-1",conf:1,src:"azt"},
     {d:"2026-11-28",opp:"Iowa State",ha:"A",res:"",time:"1:00 p.m. CT",tv:"ESPN+",place:"Jack Trice Stadium, Ames, IA",note:"Farmageddon",conf:1,src:"isu"}
   ],
   next2027: "Holden's freshman season! Home openers vs. South Dakota (Sep 4) and Georgia Southern (Sep 11) are tentative. Big 12 home games: Baylor, BYU, Cincinnati, Utah, West Virginia. Road: Arizona, UCF, Kansas, Texas Tech."
