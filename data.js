@@ -5,7 +5,7 @@
    ===================================================================== */
 var SITE_VERSION = "2026-11-24.1";   /* bump on every change (also in version.json) */
 var INFO_UPDATED = "Nov 24, 2026";
-var INFO_UPDATED_AT = "2026-11-24T05:40:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
+var INFO_UPDATED_AT = "2026-11-24T05:24:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
