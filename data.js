@@ -3,9 +3,9 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-24.1";   /* bump on every change (also in version.json) */
-var INFO_UPDATED = "Nov 24, 2026";
-var INFO_UPDATED_AT = "2026-11-24T05:24:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
+var SITE_VERSION = "2026-11-25.1";   /* bump on every change (also in version.json) */
+var INFO_UPDATED = "Nov 25, 2026";
+var INFO_UPDATED_AT = "2026-11-25T05:19:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
@@ -83,13 +83,15 @@ var SRC = {
  gz:{t:"Spokesman-Review — Players Era 16 primer",u:"https://www.spokesman.com/stories/2026/nov/21/players-era-16-primer-breaking-down-all-seven-team/",w:"Nov 21, 2026: No. 22 Gonzaga vs K-State Tuesday on ESPN at T-Mobile Arena",g:"News & athletics"},
  pe16p:{t:"K-State Athletics — K-State opens Players Era 16 Tuesday night vs. Gonzaga",u:"https://www.kstatesports.com/news/2026/11/23/mens-basketball-k-state-opens-players-era-16-tuesday-night-vs-22-20-gonzaga",w:"Nov 23, 2026 preview: tip times/TV for Nov 24, 26 and 27",g:"News & athletics"},
  qb2:{t:"Wichita Eagle via Yahoo Sports — K-State faces QB uncertainty before Iowa State",u:"https://sports.yahoo.com/articles/kansas-state-once-again-dealing-191506380.html",w:"Nov 23, 2026: Duff day-to-day; Barnett ready if needed",g:"News & athletics"},
+ gzr:{t:"640 WXSM (AP) — No. 22 Gonzaga cruises past Kansas State",u:"https://www.640wxsm.com/2026/11/25/massamba-diop-no-22-gonzaga-cruise-past-kansas-state/",w:"Nov 24, 2026 Players Era 16 recap: Gonzaga 101, K-State 61; Alabama next",g:"News & athletics"},
+ cfp4:{t:"NCAA.com — Fourth College Football Playoff rankings of 2026",u:"https://www.ncaa.com/news/football/article/2026-11-24/tennessee-rises-alabama-and-indiana-fall-fourth-college-football-playoff-rankings-2026",w:"CFP Top 25 released Nov 24, 2026",g:"News & athletics"},
  fb27b:{t:"Sports Brackets — K-State 2027 opponents",u:"https://sportsbrackets.net/2026/09/03/kansas-state-wildcats-future-opponents-schedule-by-year/",w:"2027 Big 12 home and away opponents",g:"News & athletics"}
 };
 
 var NEWS = [
+ {g:"ath",date:"Nov 24, 2026",t:"Gonzaga routs K-State in Las Vegas opener",s:"No. 22 Gonzaga built a 58-31 halftime lead and won 101-61 in the Players Era 16 opener, dropping K-State to 3-3. Dez Lindsay scored 16 for the Cats, who meet Alabama on Thanksgiving night.",src:"gzr",by:"AP via 640 WXSM"},
  {g:"ath",date:"Nov 23, 2026",t:"QB question mark again before Farmageddon",s:"Dillon Duff, who took every snap in the last two games, is listed day-to-day after absorbing hard hits against Arizona. If he can't go Saturday at Iowa State, Blake Barnett — who has four TD passes this season — would start; K-State has dropped five straight since Avery Johnson's season-ending injury.",src:"qb2",by:"Wichita Eagle"},
  {g:"ath",date:"Nov 21, 2026",t:"Arizona erases late deficit, wins in OT",s:"K-State led 28-17 in the fourth quarter of a rainy Senior Day, but No. 19 Arizona scored the final 18 points — tying it with 17 seconds left and winning 35-28 in overtime after the Cats were stopped at the goal line. Rodney Fields Jr. ran for 144 yards; the loss drops K-State to 4-7 and ends its bowl hopes.",src:"azr",by:"K-State Athletics"},
- {g:"ath",date:"Nov 23, 2026",t:"Late-night tip vs. Gonzaga opens Vegas trip",s:"K-State (3-2) faces No. 22/20 Gonzaga at 11:30 p.m. CT Tuesday on ESPN to open the Players Era 16. Every team gets three games; next up Thursday night is Alabama or Baylor, then a Friday game.",src:"pe16p",by:"K-State Athletics"},
  {g:"ath",date:"Nov 20, 2026",t:"Campbell pulls off upset in Manhattan",s:"K-State led 34-31 at the half, but Campbell outscored the Cats 49-36 after the break to win 80-70 and snap K-State's three-game win streak. Brandon Rechsteiner led K-State with 18, and Brock Vice added 15 points and 10 rebounds; the Cats (3-2) face Gonzaga in Las Vegas on Tuesday night.",src:"camr",by:"K-State Athletics"},
  {g:"sal",date:"Nov 19, 2026",t:"Salina joins new NOAA aviation pilot program",s:"K-State Salina was picked as one of three founding schools — with Florida Tech and North Dakota — for NOAA's new Cooperative Aviation Center, which gives aviation students a path into flying for the NOAA Commissioned Officer Corps, including on research and hurricane missions.",src:"noaa",by:"KSAL via K-State News"},
  {g:"sal",date:"Nov 9, 2026",t:"Salina can now test its own instrument-rating pilots",s:"The FAA granted K-State Salina self-examining authority for instrument ratings, so students can finish with an end-of-course check by campus flight instructors instead of waiting on an outside examiner — saving time and up to about $1,000 each.",src:"sal1",by:"K-State News"},
@@ -108,8 +110,8 @@ var EVENTS = [
  {d:"2026-11-16",c:"bb",t:"Basketball vs Montana",s:"Final: K-State 86, Montana 45",time:"7:00 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"ESPN+ · Radio: K-State Sports Network",info:"Isaiah Abraham led five Wildcats in double figures with 16; K-State moved to 3-1.",src:"mont"},
  {d:"2026-11-20",c:"bb",t:"Basketball vs Campbell",s:"Final: Campbell 80, K-State 70",time:"7:00 p.m. Central",place:"Bramlage Coliseum, Manhattan, KS",tv:"ESPN+ · Radio: K-State Sports Network",info:"K-State led 34-31 at halftime before Campbell took over in the second half. Rechsteiner scored 18; Schutt and Vice had 15 each (Vice also grabbed 10 rebounds). K-State fell to 3-2.",src:"camr"},
  {d:"2026-11-21",c:"fb",t:"Football vs Arizona — Senior Day",s:"Final (OT): Arizona 35, K-State 28",time:"6:00 p.m. Central (kickoff)",tv:"FS1 · Radio: K-State Sports Network",info:"K-State led 28-17 with about 11 minutes left, but Arizona tied it with 17 seconds to go and won in overtime after a goal-line stand. Rodney Fields Jr. ran for 144 yards and Dillon Duff added a 58-yard TD run. K-State fell to 4-7, ending its bowl hopes.",place:"Bill Snyder Family Stadium, Manhattan, KS",src:"azr"},
- {d:"2026-11-24",c:"bb",t:"Basketball vs Gonzaga",s:"11:30 p.m. CT · Players Era 16 · Las Vegas",time:"11:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPN",info:"Opening round of the Players Era 16 (Nov 24–28) vs. No. 22/20 Gonzaga (3-1); K-State comes in at 3-2 after the Campbell loss. Radio: K-State Sports Network. K-State then plays Alabama or Baylor on Thursday (Nov 26).",src:"pe16p"},
- {d:"2026-11-26",c:"bb",t:"Basketball vs Alabama or Baylor (Players Era 16)",s:"Thanksgiving night · 10:30 p.m. CT on ESPN if K-State beats Gonzaga, 8:00 p.m. CT on ESPNU if not",time:"8:00 or 10:30 p.m. Central",place:"Las Vegas, NV",tv:"ESPN (10:30) or ESPNU (8:00)",info:"Opponent and time depend on Tuesday's results.",src:"pe16p"},
+ {d:"2026-11-24",c:"bb",t:"Basketball vs Gonzaga",s:"Final: Gonzaga 101, K-State 61",time:"11:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPN",info:"Players Era 16 opener. Gonzaga led 58-31 at halftime; Dez Lindsay had 16 and Brock Vice 11 for K-State, which fell to 3-3. Next: Alabama on Thanksgiving night.",src:"gzr"},
+ {d:"2026-11-26",c:"bb",t:"Basketball vs Alabama (Players Era 16)",s:"Thanksgiving night · 8:00 p.m. CT · ESPNU · Las Vegas",time:"8:00 p.m. Central",place:"Las Vegas, NV",tv:"ESPNU · Radio: K-State Sports Network",info:"Both teams lost their openers (K-State to Gonzaga, Alabama 68-63 to Baylor), so they meet in the second-round game the official preview slotted for 8:00 p.m. CT on ESPNU.",src:"gzr"},
  {d:"2026-11-27",c:"bb",t:"Basketball — Players Era 16, third game",s:"Opponent TBD · 4:30 or 7:30 p.m. CT",time:"4:30 or 7:30 p.m. Central",place:"Las Vegas, NV",info:"Every team plays three games. K-State plays again Sat., Nov. 28 (9:30 p.m. CT) only in the championship, if it wins its first three.",src:"pe16p"},
  {d:"2026-11-28",c:"fb",t:"Football at Iowa State",s:"Ames, IA · season finale · 1:00 p.m. CT · ESPN+",time:"1:00 p.m. Central (kickoff)",place:"Jack Trice Stadium, Ames, IA",tv:"ESPN+ · Radio: K-State Sports Network",info:"Farmageddon — K-State's last game of 2026. After the Arizona loss (4-7) the Cats can't reach bowl eligibility, so this is the season finale. QB Dillon Duff is day-to-day; Blake Barnett would start if he can't play.",src:"isu"},
  {d:"2026-12-01",c:"dl",t:"Scholarship priority date",s:"Freshman priority date for K-State scholarship consideration",info:"Applying and being admitted by Dec 1 gives the best chance at scholarships.",src:"prio"},
@@ -148,12 +150,12 @@ var EVENTS = [
    The daily update fills in results, kickoff times/TV, rankings and the bowl picture. */
 var FOOTBALL = {
   season: 2026,
-  asOf: "Nov 24, 2026",
+  asOf: "Nov 25, 2026",
   coach: "Collin Klein (1st season as head coach)",
   conf: "Big 12",
-  ranking: { ap: "Not ranked (AP poll of Nov. 22)", cfp: "Not ranked (CFP rankings of Nov. 17)" },
+  ranking: { ap: "Not ranked (AP poll of Nov. 22)", cfp: "Not ranked (CFP rankings of Nov. 24)" },
   confNote: "1-7 in Big 12 play after the overtime loss to Arizona, near the bottom of the conference; 4-7 overall with one game left — Saturday at Iowa State, where QB Dillon Duff is day-to-day.",
-  top25: "Big 12 teams in the Week 13 AP Top 25 (released Sun., Nov. 22): No. 2 Utah, No. 9 Texas Tech, No. 11 BYU, No. 16 Arizona — which beat K-State in overtime on Senior Day — and No. 17 Houston. In the third CFP rankings (Tue., Nov. 17): No. 2 Utah, No. 10 BYU, No. 12 Texas Tech, No. 19 Arizona and No. 20 Houston.",
+  top25: "Big 12 teams in the Week 13 AP Top 25 (released Sun., Nov. 22): No. 2 Utah, No. 9 Texas Tech, No. 11 BYU, No. 16 Arizona — which beat K-State in overtime on Senior Day — and No. 17 Houston. In the fourth CFP rankings (Tue., Nov. 24): No. 2 Utah, No. 10 BYU, No. 11 Texas Tech, No. 16 Arizona and No. 18 Houston.",
   titleGame: "The Big 12 Championship Game is Friday, Dec. 4, 2026 at AT&T Stadium in Arlington, Texas — the winner earns an automatic College Football Playoff bid. Unbeaten Utah has already locked up one of the two spots. K-State is out of the title race this year.",
   bowlNote: "No bowl this year: teams need 6 wins to be bowl eligible, and at 4-7 K-State can finish no better than 5-7. The Iowa State game on Nov. 28 is the season finale. (K-State had been bowl eligible in 14 of the previous 15 seasons.)",
   bowl: "",          /* e.g. "Bowl: Liberty Bowl vs. ___ · Dec 27 · ESPN" once announced */
