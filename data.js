@@ -3,9 +3,9 @@
    This is the only file the daily update edits: dates, news, sources.
    Keep summaries in your own words; every event/news item points to a SRC key.
    ===================================================================== */
-var SITE_VERSION = "2026-11-27.1";   /* bump on every change (also in version.json) */
-var INFO_UPDATED = "Nov 27, 2026";
-var INFO_UPDATED_AT = "2026-11-27T05:18:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
+var SITE_VERSION = "2026-11-28.1";   /* bump on every change (also in version.json) */
+var INFO_UPDATED = "Nov 28, 2026";
+var INFO_UPDATED_AT = "2026-11-28T05:18:00-06:00";   /* exact time of the last data update (ISO, Central offset) */
 
 var SRC = {
  cal:{t:"K-State 2027–2028 Academic Calendar",u:"https://www.k-state.edu/registrar/students/calendar/2027-2028%20Academic-Calendar-for-Web.pdf",w:"Fall 2027 & Spring 2028 class dates, breaks, finals and commencement",g:"Academics & calendar"},
@@ -89,14 +89,16 @@ var SRC = {
  ret:{t:"Wichita Eagle via Yahoo Sports — Klein will move quickly to retain players after ISU game",u:"https://sports.yahoo.com/college-football/articles/collin-klein-quickly-retain-certain-191608199.html",w:"Nov 24, 2026: roster talks, early signing period Dec 2, portal opens Jan 2",g:"News & athletics"},
  ala:{t:"K-State Athletics — K-State to play 15/15 Alabama at Players Era 16 Thursday night",u:"https://www.kstatesports.com/news/2026/11/25/mens-basketball-k-state-to-play-15-15-alabama-at-players-era-16-thursday-night",w:"Nov 25, 2026 preview of the Thanksgiving night game",g:"News & athletics"},
  alar:{t:"K-State Athletics — Big first half propels 15/15 Alabama past K-State, 104-91",u:"https://www.kstatesports.com/news/2026/11/27/untitled-story",w:"Nov 26, 2026 Players Era 16 recap; Michigan next Fri., 4:30 p.m. CT on ESPNU",g:"News & athletics"},
+ mich:{t:"Sports Illustrated (K-State On SI) — Disastrous week in Las Vegas raises concerns",u:"https://www.si.com/college/kstate/latest-news/disastrous-week-in-las-vegas-raises-major-concerns-for-k-state-basketball-01m8fvmc903j",w:"Nov 27, 2026: Michigan 98, K-State 69; 0-3 in Players Era 16",g:"News & athletics"},
+ michw:{t:"Wichita Eagle via Yahoo Sports — K-State finishes winless Las Vegas trip",u:"https://sports.yahoo.com/mens-college-basketball/articles/kansas-state-finishes-winless-trip-005246404.html",w:"Nov 28, 2026 Michigan recap: Vice 16, Lindsay 15; Seton Hall next Dec 4",g:"News & athletics"},
  fb27b:{t:"Sports Brackets — K-State 2027 opponents",u:"https://sportsbrackets.net/2026/09/03/kansas-state-wildcats-future-opponents-schedule-by-year/",w:"2027 Big 12 home and away opponents",g:"News & athletics"}
 };
 
 var NEWS = [
+ {g:"ath",date:"Nov 27, 2026",t:"Michigan routs K-State as Vegas trip ends 0-3",s:"Michigan led by 17 at halftime and won 98-69, sending K-State home winless from Players Era 16 and on a four-game skid (3-5). Brock Vice had 16 points and Dez Lindsay 15 off the bench as the Cats shot just 10 of 39 from three; next up is a Dec. 4 trip to Seton Hall.",src:"michw",by:"Wichita Eagle"},
  {g:"ath",date:"Nov 26, 2026",t:"Cats push Alabama but fall on Thanksgiving night",s:"No. 15 Alabama raced to a 51-35 halftime lead and held on 104-91, though K-State outscored the Tide after the break. Brandon Rechsteiner and Brock Vice each set career highs with 27 points; the Cats (3-4) close the Las Vegas trip against Michigan on Friday.",src:"alar",by:"K-State Athletics"},
  {g:"ath",date:"Nov 24, 2026",t:"Klein plans quick roster talks after the finale",s:"Once the Iowa State game is over, the K-State staff intends to sit down with returning players right away about staying in Manhattan — ahead of the early signing period opening Dec. 2 and the transfer portal opening Jan. 2. Whether QB Avery Johnson returns is the biggest open question.",src:"ret",by:"Wichita Eagle"},
  {g:"ath",date:"Nov 24, 2026",t:"Gonzaga routs K-State in Las Vegas opener",s:"No. 22 Gonzaga built a 58-31 halftime lead and won 101-61 in the Players Era 16 opener, dropping K-State to 3-3. Dez Lindsay scored 16 for the Cats, who meet Alabama on Thanksgiving night.",src:"gzr",by:"AP via 640 WXSM"},
- {g:"ath",date:"Nov 21, 2026",t:"Arizona erases late deficit, wins in OT",s:"K-State led 28-17 in the fourth quarter of a rainy Senior Day, but No. 19 Arizona scored the final 18 points — tying it with 17 seconds left and winning 35-28 in overtime after the Cats were stopped at the goal line. Rodney Fields Jr. ran for 144 yards; the loss drops K-State to 4-7 and ends its bowl hopes.",src:"azr",by:"K-State Athletics"},
  {g:"sal",date:"Nov 19, 2026",t:"Salina joins new NOAA aviation pilot program",s:"K-State Salina was picked as one of three founding schools — with Florida Tech and North Dakota — for NOAA's new Cooperative Aviation Center, which gives aviation students a path into flying for the NOAA Commissioned Officer Corps, including on research and hurricane missions.",src:"noaa",by:"KSAL via K-State News"},
  {g:"sal",date:"Nov 9, 2026",t:"Salina can now test its own instrument-rating pilots",s:"The FAA granted K-State Salina self-examining authority for instrument ratings, so students can finish with an end-of-course check by campus flight instructors instead of waiting on an outside examiner — saving time and up to about $1,000 each.",src:"sal1",by:"K-State News"},
  {g:"sal",date:"Oct 19, 2026",t:"New Silicon Prairie Trailblazers scholarships",s:"K-State Salina will award $12,000 over two years to 40 incoming fall 2027 students in four emerging-tech programs (immersive systems, machine learning, robotics and uncrewed aircraft). Aviation maintenance isn't one of them.",src:"n5",by:"JC Post"},
@@ -116,7 +118,7 @@ var EVENTS = [
  {d:"2026-11-21",c:"fb",t:"Football vs Arizona — Senior Day",s:"Final (OT): Arizona 35, K-State 28",time:"6:00 p.m. Central (kickoff)",tv:"FS1 · Radio: K-State Sports Network",info:"K-State led 28-17 with about 11 minutes left, but Arizona tied it with 17 seconds to go and won in overtime after a goal-line stand. Rodney Fields Jr. ran for 144 yards and Dillon Duff added a 58-yard TD run. K-State fell to 4-7, ending its bowl hopes.",place:"Bill Snyder Family Stadium, Manhattan, KS",src:"azr"},
  {d:"2026-11-24",c:"bb",t:"Basketball vs Gonzaga",s:"Final: Gonzaga 101, K-State 61",time:"11:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPN",info:"Players Era 16 opener. Gonzaga led 58-31 at halftime; Dez Lindsay had 16 and Brock Vice 11 for K-State, which fell to 3-3. Next: Alabama on Thanksgiving night.",src:"gzr"},
  {d:"2026-11-26",c:"bb",t:"Basketball vs No. 15 Alabama (Players Era 16)",s:"Final: Alabama 104, K-State 91",time:"8:00 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPNU · Radio: K-State Sports Network",info:"Alabama led 51-35 at halftime; K-State won the second half 56-53. Brandon Rechsteiner and Brock Vice each scored a career-high 27 and Isaiah Abraham added 11. K-State fell to 3-4.",src:"alar"},
- {d:"2026-11-27",c:"bb",t:"Basketball vs No. 15 Michigan (Players Era 16)",s:"Seventh-place game · 4:30 p.m. CT · ESPNU · Las Vegas",time:"4:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPNU · Radio: K-State Sports Network",info:"Final game of the Las Vegas trip, against defending national champion Michigan (also 3-4).",src:"alar"},
+ {d:"2026-11-27",c:"bb",t:"Basketball vs No. 15 Michigan (Players Era 16)",s:"Final: Michigan 98, K-State 69",time:"4:30 p.m. Central",place:"T-Mobile Arena, Las Vegas, NV",tv:"ESPNU · Radio: K-State Sports Network",info:"Michigan led by 17 at the half. Brock Vice scored 16 with 7 rebounds and Dez Lindsay added 15; K-State hit 10 of 39 threes. The Cats went 0-3 in Las Vegas, finished eighth, and fell to 3-5 with four straight losses.",src:"mich"},
  {d:"2026-11-28",c:"fb",t:"Football at Iowa State",s:"Ames, IA · season finale · 1:00 p.m. CT · ESPN+",time:"1:00 p.m. Central (kickoff)",place:"Jack Trice Stadium, Ames, IA",tv:"ESPN+ · Radio: K-State Sports Network",info:"Farmageddon — K-State's last game of 2026. After the Arizona loss (4-7) the Cats can't reach bowl eligibility, so this is the season finale. Iowa State (5-6, 3-5 Big 12) can clinch bowl eligibility with a win and is favored by about 3.5. QB Dillon Duff is day-to-day; Blake Barnett would start if he can't play.",src:"isu5"},
  {d:"2026-12-01",c:"dl",t:"Scholarship priority date",s:"Freshman priority date for K-State scholarship consideration",info:"Applying and being admitted by Dec 1 gives the best chance at scholarships.",src:"prio"},
  {d:"2026-12-02",c:"fb",t:"Football early signing period opens",s:"K-State expected to sign about 26 recruits · transfer portal opens Jan 2",src:"ret"},
@@ -156,7 +158,7 @@ var EVENTS = [
    The daily update fills in results, kickoff times/TV, rankings and the bowl picture. */
 var FOOTBALL = {
   season: 2026,
-  asOf: "Nov 27, 2026",
+  asOf: "Nov 28, 2026",
   coach: "Collin Klein (1st season as head coach)",
   conf: "Big 12",
   ranking: { ap: "Not ranked (AP poll of Nov. 22)", cfp: "Not ranked (CFP rankings of Nov. 24)" },
